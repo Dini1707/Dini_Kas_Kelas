@@ -46,11 +46,21 @@ font-family: 'Times New Roman', Times, serif;
     position: absolute;
 width: 75px;
 height: 40px;
-left: 410px;
+left: 625px;
 margin-top: 140px;
 
 background: #72AAA7;
 border-radius: 10px;
 font-family: 'Times New Roman', Times, serif;
 
+}
+
+.sidebar{
+    position: absolute;
+width: 230px;
+height: 100%;
+left: 0px;
+top: 0px;
+
+background: #8AB5B2;
 }
