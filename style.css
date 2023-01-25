@@ -64,3 +64,13 @@ top: 0px;
 
 background: #8AB5B2;
 }
+
+.navbar{
+    position: absolute;
+width: 1050px;
+height: 57px;
+left: 230px;
+top: 0px;
+
+background: #AABBBA;
+}

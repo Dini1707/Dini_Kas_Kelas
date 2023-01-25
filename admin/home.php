@@ -57,9 +57,9 @@ include "isi.php";
         </nav>
 
         
-       <!-- As a heading -->
-<nav class="navbar navbar-light bg-">
-  <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">Navbar</span>
-  </div>
-</nav> 
+       <nav >
+        <div class="navbar">
+            <p>Buku Kas Kelas</p>
+        </div>
+       </nav>
+
