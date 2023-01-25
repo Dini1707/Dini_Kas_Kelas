@@ -2,30 +2,23 @@
 
 include "boot.php";
 ?>
-<?php
-session_start();
-$username = 'admin';
-$password = 'admin';
-if (isset($_POST['submit'])){
-  if ($_POST['username'] == $username && $_POST ['password'] == $password){
-    $_SESSION["username"] == $username;
-    echo "Login Sukses $username";
-  }else{
 
-    login();
-    echo 'Login Gagal';
+<?php 
+	if(isset($_GET['pesan'])){
+		if($_GET['pesan'] == "gagal"){
+			echo "Login gagal! username dan password salah!";
+		}else if($_GET['pesan'] == "logout"){
+			echo "Anda telah berhasil logout";
+		}else if($_GET['pesan'] == "belum_login"){
+			echo "Anda harus login untuk mengakses halaman admin";
+		}
+	}
+	?>
 
-  }
-}else{
-  login();
-}
-
-function login(){ ?>
 <img src="logo.png" alt="" class="logo"><br>
        <p ><h5 class="judul">Harap Input  Username Dan Password</h5></p>
-       <form action="<?php echo $_SERVER['PHP_SELF'];?>" method='post'>
+       <form action="cek_login.php" method='post'>
         <input type="text" class="input1" id="username" placeholder="E-mail/UserName" name="username">
         <input type="password" class="input2" id="password" placeholder="Password" name="password">
         <input class="button" type="submit" name="submit" value="login">
        </form>
-<?php }?>
