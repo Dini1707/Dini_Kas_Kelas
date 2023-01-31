@@ -15,7 +15,7 @@ include "boot.php";
 	}
 	?>
 
-<img src="logo.png" alt="" class="logo"><br>
+<img src="img/logo.png" alt="" class="logo"><br>
        <p ><h5 class="judul">Harap Input  Username Dan Password</h5></p>
        <form action="cek_login.php" method='post'>
         <input type="text" class="input1" id="username" placeholder="E-mail/UserName" name="username">

@@ -67,10 +67,29 @@ background: #8AB5B2;
 
 .navbar{
     position: absolute;
-width: 1050px;
+width: 494%;
 height: 57px;
 left: 230px;
 top: 0px;
 
 background: #AABBBA;
 }
+
+.icon{
+    height: 32px;
+    width: 32px;
+    margin: 0;
+}
+
+.tampil{
+    
+position: absolute;
+width: 235px;
+height: 115px;
+left: 349px;
+top: 195px;
+
+background: #E3D1B5;
+border-radius: 10px;
+}
+

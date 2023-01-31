@@ -2,6 +2,20 @@
 include "../boot.php";
 include "../koneksi.php";
 
+session_start();
+
+if ($_SESSION ['level'] == "") {
+  header("location: . ./home.php?pesan=gagal");
+  # code...
+}
+
+if ($_SESSION ['level'] =="petugas") {
+  header("location: . ./petugas/index.php");
+  # code...
+}
+
+echo $_SESSION['level'];
+
 
 ?>
 
@@ -16,7 +30,7 @@ include "../koneksi.php";
         </tr>
 
         <?php 
-        $query = "SELECT * FROM tb_kas_kelas";
+        $sql = "SELECT * FROM tb_kas_kelas";
         $select = mysqli_query($koneksi, $query);
         while ($data =mysqli_fetch_array($select)){
       ?>

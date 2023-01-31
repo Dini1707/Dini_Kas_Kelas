@@ -11,16 +11,29 @@ $password = $_POST['password'];
 
  
 // menyeleksi data admin dengan username dan password yang sesuai
-$data = mysqli_query($koneksi,"select * from tb_login where username='$username' and password='$password' ");
- 
-// menghitung jumlah data yang ditemukan
-$cek = mysqli_num_rows($data);
- 
-if($cek > 0){
-	$_SESSION['username'] = $username;
-	$_SESSION['status'] = "login";
-	header("location:admin/home.php");
+
+$sql = " SELECT * FROM tb_user where  username='$username' and password= md5('$password') ";
+$result = $conn->query($sql);
+
+if ($result-> num_rows > 0) {
+	// output data of each row
+	while ($row = $result-> fetch_assoc()){
+		if ($row ['role' ]== "admin") {
+			$_SESSION['username'] = $username;
+			$_SESSION['level'] = "admin";
+			header("location:admin/home.php");
+		}elseif ($row ['role'] == "petugas") {
+			$_SESSION['username'] = $username;
+			$_SESSION['level'] = "petugas";
+			header("location:petugas/home.php");
+			# code...
+		}
+			}
+		
 }else{
 	header("location:index.php?pesan=gagal");
 }
+$conn->close();
+
+
 ?>
