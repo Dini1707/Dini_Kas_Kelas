@@ -109,14 +109,42 @@ top: 195px;
 background: #E3D1B5;
 border-radius: 10px;
 }
-
+/* kotak */
 .kotak1{
     position: absolute;
 width: 235px;
 height: 115px;
 left: 349px;
 top: 195px;
-
+align-items: center;
 background: #E3D1B5;
+border-radius: 10px;
+}
+
+.g1{
+    position: absolute;
+width: 75px;
+height: 65px;
+left: 55%;
+top: 20%;
+}
+.p1{
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    
+}
+
+
+/* tutup kotak */
+
+.kotak2{
+    position: absolute;
+width: 235px;
+height: 115px;
+left: 637px;
+top: 195px;
+
+background: #8FACB8;
 border-radius: 10px;
 }
