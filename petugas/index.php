@@ -4,47 +4,47 @@ include "../koneksi.php";
 
 session_start();
 
-if ($_SESSION ['level'] == "") {
-  header("location: . ./home.php?pesan=gagal");
+if ($_SESSION ['level'] = "") {
+  header("location: ../index.php");
   # code...
 }
 
 if ($_SESSION ['level'] =="petugas") {
-  header("location: . ./petugas/index.php");
+  header("location: ../petugas/index.php");
   # code...
 }
 
 echo $_SESSION['level'];
-
-
 ?>
-
 <table border=1 class="table">
         <tr>
-            <td>no</td>
-            <td>tanggal</td>
-            <td>pemasukan</td>
-            <td>pengeluaran</td>
-            <td>jumlah</td>
-            <td>keterangan</td>
+            <td>NO</td>
+            <td>TANGGAL</td>
+            <td>PEMASUKAN</td>
+            <td>PENGELUARAN</td>
+            <td>JUMLAH</td>
+            <td>KETERANGAN</td>
+            <td>ACTION</td>
         </tr>
 
         <?php 
         $sql = "SELECT * FROM tb_kas_kelas";
-        $select = mysqli_query($koneksi, $query);
-        while ($data =mysqli_fetch_array($select)){
+        $result = $conn->query($sql);
+        if ($row=$result->fetch_assoc()) {
+        
       ?>
       
             <tr>
-                <td><?php echo $data["no"]?></td>
-                <td><?php echo $data["tanggal"]?></td>
-                <td><?php echo $data["pemasukan"]?></td>
-                <td><?php echo $data["pengeluaran"]?></td>
-                <td><?php echo $data["jumlah"]?></td>
-                <td><?php echo $data["keterangan"]?></td>
+                <td><?php echo $row["NO"]?></td>
+                <td><?php echo $row["TANGGAL"]?></td>
+                <td><?php echo $row["PEMASUKAN"]?></td>
+                <td><?php echo $row["PENGELUARAN"]?></td>
+                <td><?php echo $row["JUMLAH"]?></td>
+                <td><?php echo $row["KETERANGAN"]?></td>
             </tr>
       <?php
         }
 ?>
 </table>
 
+              <a href="../logout.php">logout</a>

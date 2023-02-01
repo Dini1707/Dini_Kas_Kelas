@@ -10,7 +10,7 @@ if (isset ($_POST['add'])) {
     $add = mysqli_query($koneksi, "INSERT INTO  tb_kas_kelas VALUE(' ','$tanggal', '$pemasukan' , '$pengeluaran','$pemasukan - $pengeluaran', '$keterangan')");
 
     if ($add){
-        header('location: home.php');
+        header('location: index.php');
     }
 }
 ?>

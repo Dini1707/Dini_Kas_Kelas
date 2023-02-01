@@ -49,7 +49,7 @@ height: 40px;
 left: 54%;
 margin-top: 11%;
 
-background: #72AAA7;
+background: #558CB4;
 border-radius: 10px;
 font-family: 'Times New Roman', Times, serif;
 
@@ -57,28 +57,34 @@ font-family: 'Times New Roman', Times, serif;
 
 .sidebar{
     position: absolute;
-width: 230px;
+width: 15%;
 height: 100%;
 left: 0px;
 top: 0px;
 
-background: #8AB5B2;
+background: #7FA2BB;
 }
 
 .navbar{
     position: absolute;
-width: 494%;
+width: 1160px;
 height: 57px;
-left: 230px;
+left: 205px;
 top: 0px;
-
-background: #AABBBA;
+background: #7494AB;
 }
 
+
+.navbar h3{
+    font-family: 'Times New Roman';
+    font-weight: bold;
+}
+
+
 .icon{
-    height: 32px;
-    width: 32px;
-    margin: 0;
+    height: 35px;
+    width: 35px;
+   left: 27px;
 }
 
 .tampil{
@@ -93,3 +99,24 @@ background: #E3D1B5;
 border-radius: 10px;
 }
 
+.masuk{
+    position: absolute;
+width: 235px;
+height: 115px;
+left: 349px;
+top: 195px;
+
+background: #E3D1B5;
+border-radius: 10px;
+}
+
+.kotak1{
+    position: absolute;
+width: 235px;
+height: 115px;
+left: 349px;
+top: 195px;
+
+background: #E3D1B5;
+border-radius: 10px;
+}

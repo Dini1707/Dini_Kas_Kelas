@@ -21,17 +21,17 @@ if ($result-> num_rows > 0) {
 		if ($row ['role' ]== "admin") {
 			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "admin";
-			header("location:admin/home.php");
+			header("location:admin/index.php");
 		}elseif ($row ['role'] == "petugas") {
 			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "petugas";
-			header("location:petugas/home.php");
+			header("location:petugas/index.php");
 			# code...
 		}
 			}
 		
 }else{
-	header("location:index.php?pesan=gagal");
+	header("location:index.php");
 }
 $conn->close();
 
