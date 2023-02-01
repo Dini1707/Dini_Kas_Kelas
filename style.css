@@ -116,7 +116,6 @@ width: 235px;
 height: 115px;
 left: 349px;
 top: 195px;
-align-items: center;
 background: #E3D1B5;
 border-radius: 10px;
 }
@@ -144,7 +143,18 @@ width: 235px;
 height: 115px;
 left: 637px;
 top: 195px;
-
 background: #8FACB8;
+border-radius: 10px;
+}
+
+.kotak3{
+    position: absolute;
+width: 235px;
+height: 115px;
+left: 925px;
+top: 196px;
+
+background: #BCD6BD;
+background-blend-mode: darken;
 border-radius: 10px;
 }
