@@ -1,160 +1,153 @@
-.input1{
-    position: absolute;
-width: 300px;
-height: 45px;
-left: 38%;
-top: 40%;
+.input1 {
+  position: absolute;
+  width: 300px;
+  height: 45px;
+  left: 38%;
+  top: 40%;
 
-background: #FFFFFF;
-border: 2px solid #000000;
-border-radius: 15px;
-font-family: 'Times New Roman', Times, serif;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.logo{
-    position: absolute;
-width: 220px;
-height: 120px;
-left: 40%;
-top: 10%;
-
+.logo {
+  position: absolute;
+  width: 220px;
+  height: 120px;
+  left: 40%;
+  top: 10%;
 }
 
-.input2{
-    box-sizing: border-box;
+.input2 {
+  box-sizing: border-box;
 
-position: absolute;
-width: 300px;
-height: 45px;
-left: 38%;
-top: 50%;
+  position: absolute;
+  width: 300px;
+  height: 45px;
+  left: 38%;
+  top: 50%;
 
-background: #FFFFFF;
-border: 2px solid #000000;
-border-radius: 15px;
-font-family: 'Times New Roman', Times, serif;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.judul{
-    font-size: 83%;
-    margin-left: 42%;
-    margin-top: 13%;
-    font-family: 'Times New Roman', Times, serif;
+.judul {
+  font-size: 83%;
+  margin-left: 42%;
+  margin-top: 13%;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.button{
-    position: absolute;
-width: 75px;
-height: 40px;
-left: 54%;
-margin-top: 11%;
+.button {
+  position: absolute;
+  width: 75px;
+  height: 40px;
+  left: 54%;
+  margin-top: 11%;
 
-background: #558CB4;
-border-radius: 10px;
-font-family: 'Times New Roman', Times, serif;
-
+  background: #558cb4;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.sidebar{
-    position: absolute;
-width: 15%;
-height: 100%;
-left: 0px;
-top: 0px;
+.sidebar {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
 
-background: #7FA2BB;
+  background: #7fa2bb;
 }
 
-.navbar{
-    position: absolute;
-width: 1160px;
-height: 57px;
-left: 205px;
-top: 0px;
-background: #7494AB;
+.navbar {
+  position: absolute;
+  width: 1160px;
+  height: 57px;
+  left: 25%;
+  top: 0px;
+  background: #7494ab;
 }
 
-
-.navbar h3{
-    font-family: 'Times New Roman';
-    font-weight: bold;
+.navbar h3 {
+  font-family: "Times New Roman";
+  font-weight: bold;
 }
 
-
-.icon{
-    height: 35px;
-    width: 35px;
-   left: 27px;
+.icon {
+  height: 35px;
+  width: 35px;
+  left: 27px;
 }
 
-.tampil{
-    
-position: absolute;
-width: 235px;
-height: 115px;
-left: 349px;
-top: 195px;
+.tampil {
+  position: absolute;
+  width: 235px;
+  height: 115px;
+  left: 349px;
+  top: 195px;
 
-background: #E3D1B5;
-border-radius: 10px;
+  background: #e3d1b5;
+  border-radius: 10px;
 }
 
-.masuk{
-    position: absolute;
-width: 235px;
-height: 115px;
-left: 349px;
-top: 195px;
+.masuk {
+  position: absolute;
+  width: 235px;
+  height: 115px;
+  left: 349px;
+  top: 195px;
 
-background: #E3D1B5;
-border-radius: 10px;
+  background: #e3d1b5;
+  border-radius: 10px;
 }
 /* kotak */
-.kotak1{
-    position: absolute;
-width: 235px;
-height: 115px;
-left: 349px;
-top: 195px;
-background: #E3D1B5;
-border-radius: 10px;
+.kotak1 {
+  position: absolute;
+  width: 235px;
+  height: 115px;
+  left: 349px;
+  top: 195px;
+  background: #e3d1b5;
+  border-radius: 10px;
 }
 
-.g1{
-    position: absolute;
-width: 75px;
-height: 65px;
-left: 55%;
-top: 20%;
+.g1 {
+  position: absolute;
+  width: 75px;
+  height: 65px;
+  left: 55%;
+  top: 20%;
 }
-.p1{
-    position: absolute;
-    top: 45%;
-    left: 20%;
-    
+.p1 {
+  position: absolute;
+  top: 45%;
+  left: 20%;
 }
-
 
 /* tutup kotak */
 
-.kotak2{
-    position: absolute;
-width: 235px;
-height: 115px;
-left: 637px;
-top: 195px;
-background: #8FACB8;
-border-radius: 10px;
+.kotak2 {
+  position: absolute;
+  width: 235px;
+  height: 115px;
+  left: 637px;
+  top: 195px;
+  background: #8facb8;
+  border-radius: 10px;
 }
 
-.kotak3{
-    position: absolute;
-width: 235px;
-height: 115px;
-left: 925px;
-top: 196px;
+.kotak3 {
+  position: absolute;
+  width: 235px;
+  height: 115px;
+  left: 925px;
+  top: 196px;
 
-background: #BCD6BD;
-background-blend-mode: darken;
-border-radius: 10px;
+  background: #bcd6bd;
+  background-blend-mode: darken;
+  border-radius: 10px;
 }

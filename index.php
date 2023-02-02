@@ -15,6 +15,7 @@ include "boot.php";
 	}
 	?>
 
+<body style=" background-color: #7FA2BB;">
 <img src="img/logo.png" alt="" class="logo"><br>
        <p ><h5 class="judul">Harap Input  Username Dan Password</h5></p>
        <form action="cek_login.php" method='post'>
@@ -22,3 +23,5 @@ include "boot.php";
         <input type="password" class="input2" id="password" placeholder="Password" name="password">
         <input class="button" type="submit" name="submit" value="login">
        </form>
+
+</body>
