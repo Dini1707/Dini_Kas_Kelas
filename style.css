@@ -63,11 +63,28 @@
   background: #7fa2bb;
 }
 
+.buku{
+    position: absolute;
+width: 48px;
+height: 18px;
+left: 65px;
+top: 187px;
+
+font-family: 'Battambang';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 18px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
 .navbar {
-  position: absolute;
-  width: 1160px;
+  width: 3778%;
   height: 57px;
-  left: 25%;
+  left: 668%;
   top: 0px;
   background: #7494ab;
 }
