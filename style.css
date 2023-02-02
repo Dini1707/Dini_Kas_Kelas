@@ -168,3 +168,10 @@ color: #000000;
   background-blend-mode: darken;
   border-radius: 10px;
 }
+
+.table{
+    position: absolute;
+    top:20%;
+    left: 120%;
+}
+

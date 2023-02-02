@@ -75,10 +75,10 @@ if (isset($_GET['page'])) {
 
   switch ($page) {
     case 'home':
-      include 'home.php';
+      include "home.php";
       break;
-    case 'buku':
-      include 'tampil.php';
+    case "Buku":
+      include "tampil.php";
       break;
     default:
     echo "halam ini gak ada";
