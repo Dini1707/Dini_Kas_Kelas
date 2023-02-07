@@ -2,34 +2,35 @@
 include "isi.php";
 include "../koneksi.php";
 ?>
-<main class="container">
 <link rel="stylesheet" href="../style.css" type="text/css">
-        <div class="row">
-            <div class="col">
+        <div class="">
+            <div class="">
             <table border=1; class="table table-info table-striped">
             <tr>
-                <td>NO</td>
-                <td>TANGGAL</td>
-                <td>PEMASUKAN</td>
-                <td>PENGELUARAN</td>
-                <td>JUMLAH</td>
-                <td>KETERANGAN</td>
-                <td>ACTION</td>
+                <td>Id</td>
+                <td>Date</td>
+                <td>Name</td>
+                <td>Input</td>
+                <td>Output</td>
+                <td>Total</td>
+                <td>Information</td>
+                <td>Action</td>
             </tr>
 
             <?php 
-            $sql = "SELECT * FROM tb_kas_kelas";
+            $sql = "SELECT * FROM tb_class_cash";
             $result = $conn->query($sql);
             $data = 1;
             while ($row=$result->fetch_assoc()) {
              ?>
                 <tr>
                     <td><?php echo $data++?></td>
-                    <td><?php echo $row["TANGGAL"]?></td>
-                    <td><?php echo $row["PEMASUKAN"]?></td>
-                    <td><?php echo $row["PENGELUARAN"]?></td>
-                    <td><?php echo $row["JUMLAH"]?></td>
-                    <td><?php echo $row["KETERANGAN"]?></td>
+                    <td><?php echo $row["Date"]?></td>
+                    <td><?php echo $row["Name"]?></td>
+                    <td><?php echo $row["Input"]?></td>
+                    <td><?php echo $row["Output"]?></td>
+                    <td><?php echo $row["Total"]?></td>
+                    <td><?php echo $row["Information"]?></td>
                 </tr>
                     <?php
                         }

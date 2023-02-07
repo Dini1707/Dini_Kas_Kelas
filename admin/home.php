@@ -1,6 +1,6 @@
 
 
-<link rel="stylesheet" href="../style.css" type="text/css">
+<!-- <link rel="stylesheet" href="../style.css" type="text/css"> -->
 
 <div class="container">
 <div class="kotak1">
@@ -20,7 +20,7 @@
 </div>
        <div class="row">
         <div class="col">
-        Buku Kas
+
         </div>
         <div class="col">
 
@@ -28,3 +28,5 @@
        </div>
 
 <main>
+
+
