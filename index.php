@@ -1,6 +1,6 @@
 <?php
 
-include "boot.php";
+include "header.php";
 ?>
 
 <?php 
@@ -14,7 +14,7 @@ include "boot.php";
 		}
 	}
 	?>
-
+<link rel="stylesheet" href="style.css">
 <body style=" background-color: #7FA2BB;">
 <img src="img/logo.png" alt="" class="logo"><br>
        <p ><h5 class="judul">Harap Input  Username Dan Password</h5></p>
@@ -25,3 +25,8 @@ include "boot.php";
        </form>
 
 </body>
+
+<?php
+
+include "footer.php";
+?>

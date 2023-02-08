@@ -74,18 +74,30 @@ echo $_SESSION['level'];
     <ul class="nav nav-pills flex-column mb-auto ">
       <li class="nav-item">
         <a href="index.php?page=home" class="nav-link" aria-current="page">
-         <img src="../img/home 2.png" alt=""><use xlink:href="index.php?page=home"></use></svg>
+         <img src="../img/home 2.png" alt="" class="icon">
           Home
         </a>
       </li>
       <li>
         <a href="index.php?page=Buku" class="nav-link link-dark">
-        <img src="../img/laporan 2.png" alt=""><use xlink:href="#speedometer2"></use></svg>
+        <img src="../img/pemasukan.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
+         Buku Kas
+        </a>
+      </li>
+      <li>
+        <a href="index.php?page=Buku" class="nav-link link-dark">
+        <img src="../img/pengeluaran.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
+         Buku Kas
+        </a>
+      </li>
+      <li>
+        <a href="index.php?page=Buku" class="nav-link link-dark">
+        <img src="../img/laporan 2.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          Buku Kas
         </a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" >
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" class="icon" >
             Laporan 
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -94,30 +106,25 @@ echo $_SESSION['level'];
             <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Bulanan </a></li>
           </ul>
         </li>
-      <li>
-        <a href="#" class="nav-link link-dark">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Customers
-        </a>
-      </li>
-    </ul>
+
     <hr>
    
     <li>
         <a href="#" class="nav-link link-dark">
-        <img src="../img/logout.png" alt=""><use xlink:href="#grid"></use></svg>
+        <img src="../img/logout.png" alt="" class="icon"><use xlink:href="#grid"></use></svg>
           Logout
         </a>
       </li>
-
+      </ul>
   </div>
       </section>
       <section id="content">
-        <nav >
-         <h3 class="mx-3" >Buku Kas Kelas</h3>
-        <div class="input-group w-50 "> 
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <span class="input-group-text" id="basic-addon2">@example.com</span>
+        <nav  class="shadow" style="height: 80px;">
+         <h3 class="mx-3 py-4" >Buku Kas Kelas</h3>
+        <div class="input-group  "> 
+
+  <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" id="input">
+  <i class='bx bx-search icon'></i>
 </div>
           <div class="navbar h3">
             

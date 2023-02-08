@@ -2,9 +2,9 @@
 
 <!-- <link rel="stylesheet" href="../style.css" type="text/css"> -->
 
-<div class="container">
+<div class="container" >
 <div class="kotak1">
-    <p class="p1">uang masuk</p>
+    <p class="p1">Uang Masuk</p>
     <img class="g1" src="../img/masuk.png" alt="">
 </div>
 <link rel="stylesheet" href="../style.css">
@@ -14,7 +14,7 @@
 </div>
 <link rel="stylesheet" href="../style.css">
 <div class="kotak3">
-    <p class="p1">Total</p>
+    <p class="p1" style="left:20%;">Total </p>
     <img class="g1" src="../img/total.png" alt="">
 </div>
 </div>
