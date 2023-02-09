@@ -66,14 +66,14 @@ echo $_SESSION['level'];
         </nav> -->
 
         <div class="d-flex flex-column flex-shrink-0 p-3 " style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
       <img src="../img/profile.png" width="50%" alt=""><use xlink:href=""></use></svg>
       <span class="fs-4"></span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto ">
       <li class="nav-item">
-        <a href="index.php?page=home" class="nav-link" aria-current="page">
+        <a href="index.php?page=home" class="nav-link link-dark" aria-current="page">
          <img src="../img/home 2.png" alt="" class="icon">
           Home
         </a>
@@ -81,13 +81,13 @@ echo $_SESSION['level'];
       <li>
         <a href="index.php?page=Buku" class="nav-link link-dark">
         <img src="../img/pemasukan.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
-         Buku Kas
+         pemasukan
         </a>
       </li>
       <li>
         <a href="index.php?page=Buku" class="nav-link link-dark">
         <img src="../img/pengeluaran.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
-         Buku Kas
+         pengeluaran 
         </a>
       </li>
       <li>
@@ -110,7 +110,7 @@ echo $_SESSION['level'];
     <hr>
    
     <li>
-        <a href="#" class="nav-link link-dark">
+        <a href="../logout.php" class="nav-link link-dark">
         <img src="../img/logout.png" alt="" class="icon"><use xlink:href="#grid"></use></svg>
           Logout
         </a>
@@ -121,11 +121,15 @@ echo $_SESSION['level'];
       <section id="content">
         <nav  class="shadow" style="height: 80px;">
          <h3 class="mx-3 py-4" >Buku Kas Kelas</h3>
-        <div class="input-group  "> 
+         <div class="input-group">
+  <input type="text" class="form-control"  placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <span class="input-group-text" id="basic-addon2" ><i class='fs-3 py-1 bx bx-search icon'></i></span>
+</div>
+        <!-- <div class="input-group  "> 
 
   <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" id="input">
   <i class='bx bx-search icon'></i>
-</div>
+</div> -->
           <div class="navbar h3">
             
           </div>

@@ -18,11 +18,28 @@ include "header.php";
 <body style=" background-color: #7FA2BB;">
 <img src="img/logo.png" alt="" class="logo"><br>
        <p ><h5 class="judul">Harap Input  Username Dan Password</h5></p>
-       <form action="cek_login.php" method='post'>
-        <input type="text" class="input1" id="username" placeholder="E-mail/UserName" name="username">
-        <input type="password" class="input2" id="password" placeholder="Password" name="password">
+       <!-- <form action="cek_login.php" method='post'>
+        <input type="text" class="input1" id="username" placeholder="E-mail/UserName" name="username" required>
+        <input type="password" class="input2" id="password" placeholder="Password" name="password" required>
         <input class="button" type="submit" name="submit" value="login">
-       </form>
+       </form> -->
+
+	   <div class="row justify-content-center">
+		<div class="col-3">
+		<form action="cek_login.php" method='post'>
+  <div class="mb-4 pt-5">
+    <input placeholder="E-mail/Username" name="username" type="text" class="form-control border border-dark shadow" id="exampleInputEmail1" aria-describedby="emailHelp" required style="height:50px; border-radius:15px;">
+  </div>
+  <div class="mb-3">
+    <input placeholder="Password" name="password" type="password" class="form-control  border border-dark shadow" id="exampleInputPassword1 " required style="height:50px; border-radius:15px;">
+  </div>
+	<div class="float-end">
+	<input type="submit" name="submit" id="submit" value="Login"  class="button">
+
+	</div>
+</form>
+		</div>
+	   </div>
 
 </body>
 

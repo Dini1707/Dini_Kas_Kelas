@@ -1,54 +1,28 @@
-.input1 {
-  position: absolute;
-  width: 300px;
-  height: 45px;
-  left: 38%;
-  top: 40%;
 
-  background: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 15px;
-  font-family: "Times New Roman", Times, serif;
-}
 .images{
   margin-left: 20%;
 }
 .logo {
   position: absolute;
-  width: 220px;
-  height: 120px;
-  left: 40%;
+  width: 20%;
+  height: 20%;
+  left: 38%;
   top: 10%;
 }
 
-.input2 {
-  box-sizing: border-box;
 
-  position: absolute;
-  width: 300px;
-  height: 45px;
-  left: 38%;
-  top: 50%;
 
-  background: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 15px;
-  font-family: "Times New Roman", Times, serif;
-}
 
 .judul {
-  font-size: 83%;
-  margin-left: 42%;
+  font-size: 110%;
+  margin-left: 41%;
   margin-top: 13%;
   font-family: "Times New Roman", Times, serif;
 }
 
 .button {
-  position: absolute;
   width: 75px;
   height: 40px;
-  left: 54%;
-  margin-top: 11%;
 
   background: #558cb4;
   border-radius: 10px;
@@ -73,10 +47,10 @@ nav{
 }
 nav .input-group{
   position: relative;
-  left: 47%;
-  top: -68px;
-  width: 30%;
-  height: 45px;
+  left: 55%;
+  top: -75px;
+  width: 25%;
+  height: 50px;
 }
 
 /* #sidebar {
@@ -126,9 +100,10 @@ nav h3 {
   background-color: #7494AB;
 }
 .icon {
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   left: 27px;
+  font-family: 'Times New Roman';
 }
 
 .tampil {
@@ -154,49 +129,43 @@ nav h3 {
 }
 /* kotak */
 .kotak1 {
-  position: absolute;
-  width: 235px;
-  height: 115px;
-  left: 365px;
-  top: 195px;
+  width: 250px;
+  height: 130px;
+ 
   background: #e3d1b5;
   border-radius: 10px;
 }
 
 .g1 {
   position: absolute;
-  width: 75px;
-  height: 65px;
-  left: 55%;
-  top: 20%;
+  width: 80px;
+  height: 70px;
+  left: 60%;
+  top: 25%;
 }
 .p1 {
   position: absolute;
-  top: 45%;
-  left: 7%;
+  top: 58%;
+  left: 8%;
   font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 130%;
+  font-family: ''Times New Roman', Times, serif';
+  font-size: 110%;
 }
 
 /* tutup kotak */
 
 .kotak2 {
-  position: absolute;
-  width: 235px;
-  height: 115px;
-  left: 675px;
-  top: 195px;
+  width: 250px;
+  height: 130px;
+ 
   background: #8facb8;
   border-radius: 10px;
 }
 
 .kotak3 {
-  position: absolute;
-  width: 235px;
-  height: 115px;
-  left: 980px;
-  top: 196px;
+  width: 250px;
+  height: 130px;
+
 
   background: #bcd6bd;
   background-blend-mode: darken;
