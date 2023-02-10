@@ -1,7 +1,7 @@
 <?php
     include "../koneksi.php";
-    $no = $_GET ['no'];
-    $edit = mysqli_query($koneksi, "SELECT * FROM tb_kas_kelas  WHERE id='$no'");
+    $Id = $_GET ['Id'];
+    $edit = $conn->query($conn, "SELECT * FROM tb_class_cash  WHERE id='$Id'");
 ?>
 
 <form action="" method="post">
@@ -11,12 +11,12 @@ while ($data =mysqli_fetch_array ($edit)) {
 
 
 ?>
-<input type="text" name="no" value="<?php echo $data ['no']?>"><br>
-<input type="text" name="tanggal" value="<?php echo $data ['tanggal']?>"><br>
-<input type="text" name="pemasukan" value="<?php echo $data ['pemasukan']?>"><br>
-<input type="text" name="pengeluaran" value="<?php echo $data ['pengeluaran']?>"><br>
-<input type="text" name="jumlah" value="<?php echo $data ['jumlah']?>"><br>
-<input type="text" name="keterangan" value="<?php echo $data ['keterangan']?>"><br>
+<input type="text" name="Id" value="<?php echo $data ['Id']?>"><br>
+<input type="text" name="Date" value="<?php echo $data ['Date']?>"><br>
+<input type="text" name="Input" value="<?php echo $data ['Input']?>"><br>
+<input type="text" name="Output" value="<?php echo $data ['Output']?>"><br>
+<input type="text" name="Total" value="<?php echo $data ['Total']?>"><br>
+<input type="text" name="Information" value="<?php echo $data ['Information']?>"><br>
 <input type="submit" name="edit" value="edit">
 
 
@@ -24,16 +24,16 @@ while ($data =mysqli_fetch_array ($edit)) {
 }
 
 if (isset($_POST ['edit'])){
-    $no =$_POST  ['no'];
-    $tanggal = $_POST ['tanggal'];
-    $pemasukan = $_POST ['pemasukan'];
-    $pengeluaran = $_POST ['pengeluaran'];
-    $jumlah = $_POST ['jumlah'];
-    $keterangan = $_POST ['keterangan'];
-    $update = mysqli_query ($koneksi, "UPDATE tb_kas_kelas SET no='$no', tanggal='$tanggal', pemasukan='$pemasukan', pengeluaran='$pengeluaran', jumlah='$jumlah', keterangan='$keterangan' WHERE no='$no' ");
+    $Id =$_POST  ['Id'];
+    $Date = $_POST ['Date'];
+    $Input = $_POST ['Input'];
+    $Output = $_POST ['Output'];
+    $Total = $_POST ['Total'];
+    $Information = $_POST ['Information'];
+    $update = $conn->query ($conn, "UPDATE tb_class_cash SET Id='$Id', Date ='$Date', Input='$Input', Output='$Output', Total='$Total', Information='$Information' WHERE no='$no' ");
 
     if ($update){
-        header('location:index.php');
+        header('location:index.php?page=Buku');
     }
    
 }

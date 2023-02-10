@@ -20,50 +20,7 @@ echo $_SESSION['level'];
 <link rel="stylesheet" href="../style.css" type="text/css">
 
   <section id="sidebar">
-  <!-- <div class="sidebar " style="  border-right: 1px solid black;">
-
-      <div style="width:15%;">
-       <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse " style="color: black;">
-       <a class="navbar-brand" href="#"><img class="images" src="../img/profile.png " width="200%" alt=""></a>
-          <div class="sidebar-sticky pt-3">
-            <ul class="navbar-nav px-3 flex-column" style="margin-top:20% ;">
-              <li class="nav-item ">
-                <a class="nav-link d-flex align-items-center" href="index.php?page=home" role="button" data-toggle="dropdown" aria-expanded="false" style="color:black;">
-                  <img src="../img/home 2.png" class="icon" alt="" /> Home
-                </a>
-             
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center" href="index.php?page=Buku" style="color:black;">
-                  <img src="../img/laporan 2.png" alt="" class="icon" />
-                    Buku<span class="px-1">Kas</span>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" >
-            Laporan 
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Harian</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;">  >Laporan Mingguan</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Bulanan </a></li>
-          </ul>
-        </li>
-           
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="form">Form</a>
-                  <a class="dropdown-item" href="https://wa.me/6285861880292">Whatsapp</a>
-                  <a class="dropdown-item" href="https://www.instagram.com/diirapril28_/?next=%2F">Instagram</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a  href="../logout.php"><img src="../img/logout.png" alt=""> logout </a>
-              </li>
-            </ul>
-
-            
-          </div>
-        </nav> -->
+  
 
         <div class="d-flex flex-column flex-shrink-0 p-3 " style="width: 280px;">
     <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -79,13 +36,13 @@ echo $_SESSION['level'];
         </a>
       </li>
       <li>
-        <a href="index.php?page=Buku" class="nav-link link-dark">
+        <a href="index.php?page=Pemasukan" class="nav-link link-dark">
         <img src="../img/pemasukan.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          pemasukan
         </a>
       </li>
       <li>
-        <a href="index.php?page=Buku" class="nav-link link-dark">
+        <a href="index.php?page=Pengeluaran" class="nav-link link-dark">
         <img src="../img/pengeluaran.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          pengeluaran 
         </a>
@@ -146,6 +103,12 @@ if (isset($_GET['page'])) {
   $page = $_GET['page'];
 
   switch ($page) {
+    case 'home':
+      include "home.php";
+      break;
+    case 'Pemasukan':
+      include "tambah.php";
+      break;
     case 'home':
       include "home.php";
       break;

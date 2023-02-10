@@ -1,26 +1,27 @@
 <?php 
 include "../koneksi.php";
+include "../header.php";
 if (isset ($_POST['add'])) {
-    $tanggal = $_POST['tanggal'];
-    $pemasukan = $_POST['pemasukan'];
-    $pengeluaran = $_POST['pengeluaran'];
-    $jumlah = $_POST['jumlah'];
-    $keterangan = $_POST['keterangan'];
-    
-    $add = "INSERT INTO  tb_kas_kelas VALUE(' ','$tanggal', '$pemasukan' , '$pengeluaran','$pemasukan - $pengeluaran', '$keterangan')";
+    $Date = $_POST['Date'];
+    $Name = $_POST['Name'];
+    $Input = $_POST['Input'];
+    $Information = $_POST['Information'];
 
-    if ($add){
-        header('location: tambah.php');
+    
+    $add ="INSERT INTO tb_class_cash (Date, Name ,Input, Information ) VALUES ('$Date', '$Name', '$Input', '$Information')";
+
+    if ($conn->query ($add) === TRUE) {
+       
     }
-}
+        
+    }
+
 ?>
 
-<form action=""  method="post">
-        <input type="text" name="keterangan" placholder="no"><br>
-        <input type="text" name="keterangan" placholder="tanggal"><br>
-        <input type="text" name="keterangan" placholder="pemasukan"><br>
-        <input type="text" name="keterangan" placholder="pengeluaran"><br>
-        <input type="text" name="keterangan" placholder="jumlah"><br>
-        <input type="text" name="keterangan" placholder="keterangan"><br>
+<form action=""  method="post"><br>
+        <input type="date" name="Date" placeholder="Date"><br>
+        <input type="text" name="Name" placeholder="Name"><br>
+        <input type="text" name="Input" placeholder="Input"><br>
+        <input type="text" name="Information" placeholder="Information"><br>
         <input type="submit" name="add" value="tambahan">
 </form>

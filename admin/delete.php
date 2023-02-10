@@ -1,8 +1,8 @@
 <?php
-include "koneksi.php";
-$no = $_GET['no'];
-$delete = mysqli_query($koneksi, "DELETE FROM tb_kas_kelas WHERE  no = '$no' ");
+include "../koneksi.php";
+$Id = $_GET['Id'];
+$delete = $conn->query( "DELETE FROM tb_class_cash WHERE  Id = '$Id' ");
 
 if ($delete)
-    header('location:index.php');
+    header('location:index.php?page=Buku');
 ?>

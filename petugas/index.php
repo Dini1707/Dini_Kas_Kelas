@@ -18,12 +18,12 @@ echo $_SESSION['level'];
 ?>
 <table border=1 class="table">
         <tr>
-            <td>NO</td>
-            <td>TANGGAL</td>
-            <td>PEMASUKAN</td>
-            <td>PENGELUARAN</td>
-            <td>JUMLAH</td>
-            <td>KETERANGAN</td>
+            <td>ID</td>
+            <td>DATE</td>
+            <td>INPUT</td>
+            <td>OUTPUT</td>
+            <td>TOTAL</td>
+            <td>INFORMATION</td>
             <td>ACTION</td>
         </tr>
 
@@ -35,12 +35,12 @@ echo $_SESSION['level'];
       ?>
       
             <tr>
-                <td><?php echo $row["NO"]?></td>
-                <td><?php echo $row["TANGGAL"]?></td>
-                <td><?php echo $row["PEMASUKAN"]?></td>
-                <td><?php echo $row["PENGELUARAN"]?></td>
-                <td><?php echo $row["JUMLAH"]?></td>
-                <td><?php echo $row["KETERANGAN"]?></td>
+                <td><?php echo $row["ID"]?></td>
+                <td><?php echo $row["DATE"]?></td>
+                <td><?php echo $row["INPUT"]?></td>
+                <td><?php echo $row["OUTPUT"]?></td>
+                <td><?php echo $row["TOTAL"]?></td>
+                <td><?php echo $row["INFORMATION"]?></td>
             </tr>
       <?php
         }
