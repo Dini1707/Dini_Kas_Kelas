@@ -5,7 +5,7 @@ include "../koneksi.php";
 <link rel="stylesheet" href="../style.css" type="text/css">
         <div class="">
             <div class="">
-            <table border=1; class="table table-info table-striped"><br><br>
+            <table border=1; class="table table-info table-striped offset-1" ><br><br>
             <tr>
                 <td>ID</td>
                 <td>DATE</td>

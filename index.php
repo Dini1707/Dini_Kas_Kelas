@@ -25,12 +25,12 @@ include "header.php";
        </form> -->
 
 	   <div class="row justify-content-center">
-		<div class="col-3">
+		<div class="col-2">
 		<form action="cek_login.php" method='post'>
-  <div class="mb-4 pt-5">
+  <div class="mb-4 pt-4" >
     <input placeholder="E-mail/Username" name="username" type="text" class="form-control border border-dark shadow" id="exampleInputEmail1" aria-describedby="emailHelp" required style="height:50px; border-radius:15px;">
   </div>
-  <div class="mb-3">
+  <div class="mb-4">
     <input placeholder="Password" name="password" type="password" class="form-control  border border-dark shadow" id="exampleInputPassword1 " required style="height:50px; border-radius:15px;">
   </div>
 	<div class="float-end">
