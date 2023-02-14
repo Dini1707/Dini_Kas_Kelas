@@ -14,7 +14,6 @@ include "../koneksi.php";
                 <td>OUTPUT</td>
                 <td>TOTAL</td>
                 <td>INFORMATION</td>
-                <td>ACTION</td>
             </tr>
 
             <?php 
@@ -31,8 +30,6 @@ include "../koneksi.php";
                     <td><?php echo $row["Output"]?></td>
                     <td><?php echo $row["Total"]?></td>
                     <td><?php echo $row["Information"]?></td>
-                    <td><a href="index.php?page=edit&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
-                    <a href="delete.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>
                 </tr>
                     <?php
                         }

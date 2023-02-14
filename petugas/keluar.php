@@ -3,12 +3,11 @@ include "../koneksi.php";
 include "../header.php";
 if (isset ($_POST['add'])) {
     $Date = $_POST['Date'];
-    $Name = $_POST['Name'];
-    $Input = $_POST['Input'];
+    $Input = $_POST['Output'];
     $Information = $_POST['Information'];
 
     
-    $add ="INSERT INTO tb_class_cash (Date, Name ,Input, Information ) VALUES ('$Date', '$Name', '$Input', '$Information')";
+    $add ="INSERT INTO tb_class_cash (Date, Name ,Input, Information ) VALUES ('$Date', '$Output', '$Information')";
 
     if ($conn->query ($add) === TRUE) {
        
@@ -16,11 +15,12 @@ if (isset ($_POST['add'])) {
         
     }
 
+    
 ?>
 
-<h2 class="py-4">Tambah Kas Masuk</h2>
+<h2 class="py-4">Tambah Kas Keluar</h2>
 
-<div  style="width:120%; background-color:#377BE1;" ><h3 class="p-3 text-white">Form Kas Masuk</h3></div>
+<div  style="width:120%; background-color:#377BE1;" ><h3 class="p-3 text-white">Form Kas Keluar</h3></div>
 <div class="col-6 pt-5 offset-3 ">
 <form action=""  method="post"><br>
         <div class="row ">

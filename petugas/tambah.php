@@ -44,10 +44,9 @@ if (isset ($_POST['add'])) {
   </div>
 </div>
 
-<div class="float-end btn btn-success">
-    <img src="../img/kirim.png" width= 20px; alt="">
-	<input type="submit" name="add" id="submit"  value="Simpan"  class=" btn btn-success">
-    
+<div class="float-end">
+	<input type="submit" name="add" id="submit" value="Simpan"  class="btn btn-success">
+
 	</div>
 </form>
 </div>

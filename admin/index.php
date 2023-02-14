@@ -58,7 +58,7 @@ echo $_SESSION['level'];
             Laporan 
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Harian</a></li>
+            <li><a class="dropdown-item" href="index.php?page=Buku" style="color:black;"> >Laporan Harian</a></li>
             <li><a class="dropdown-item" href="#" style="color:black;">  >Laporan Mingguan</a></li>
             <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Bulanan </a></li>
           </ul>
@@ -117,6 +117,9 @@ if (isset($_GET['page'])) {
       break;
     case "Pengeluaran":
       include "keluar.php";
+      break;
+    case "edit":
+      include "update.php";
       break;
     default:
     echo "halam ini gak ada";
