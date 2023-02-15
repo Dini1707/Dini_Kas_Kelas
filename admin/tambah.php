@@ -17,6 +17,7 @@ if (isset ($_POST['add'])) {
     }
 
 ?>
+<link rel="stylesheet" href="../style.css" type="text/css">
 
 <h2 class="py-4">Tambah Kas Masuk</h2>
 
