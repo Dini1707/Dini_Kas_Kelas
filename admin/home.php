@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" href="../style.css" type="text/css">
 
-<div class="container pt-5 " >
+<div class="container pt-5 offset-2" >
 <div class="row pt-5">
 <div class="col-lg-4 col-md-6">
 <div class="kotak1  card" >

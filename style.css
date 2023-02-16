@@ -178,5 +178,11 @@ nav h3 {
   border-radius: 10px;
 }
 
+div h3 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
 
+div p{
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
 
