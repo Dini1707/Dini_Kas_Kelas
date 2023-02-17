@@ -35,7 +35,7 @@ echo $_SESSION['level'];
           Home
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a href="index.php?page=Pemasukan" class="nav-link link-dark">
         <img src="../img/pemasukan.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          pemasukan
@@ -46,7 +46,7 @@ echo $_SESSION['level'];
         <img src="../img/pengeluaran.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          pengeluaran 
         </a>
-      </li>
+      </li> -->
       <li>
         <a href="index.php?page=Buku" class="nav-link link-dark">
         <img src="../img/laporan 2.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
@@ -54,13 +54,13 @@ echo $_SESSION['level'];
         </a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" class="icon" >
-            Laporan 
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" class="icon" >
+            Pengelolaan Kas
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="index.php?page=Buku" style="color:black;"> >Laporan Harian</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;">  >Laporan Mingguan</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Bulanan </a></li>
+            <li><a class="dropdown-item" href="index.php?page=Pemasukan" style="color:black;"><img src="../img/pemasukan.png" width="25px"  alt=""> Pemasukan</a></li>
+            <li><a class="dropdown-item" href="index.php?page=Pengeluaran" style="color:black;"><img src="../img/pengeluaran.png" width="25px" alt="">  Pengeluaran</a></li>
+            <li><a class="dropdown-item" href="#" style="color:black;"><img src="../img/rekap.png" alt=""> Rekapitulasi </a></li>
           </ul>
         </li><br><br><br><br><br>
 

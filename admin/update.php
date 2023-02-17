@@ -3,10 +3,9 @@
     include "../header.php";
     $Id =$_GET ['Id'];
     $sql="SELECT * FROM tb_class_cash  WHERE Id='$Id'";
-    $Id = $_GET ['Id'];
     $edit = $conn->query($sql);
 ?>
-
+<link rel="stylesheet" href="../style.css">
 <form action="" method="post">
 <?php
 
@@ -14,15 +13,6 @@ while ($row=$edit->fetch_assoc ()) {
 
 
 ?>
-<!-- <input type="text" name="Id" value="<?php echo $row ['Id']?>"><br>
-<input type="text" name="Date" value="<?php echo $row  ['Date']?>"><br>
-<input type="text" name="Name" value="<?php echo $row  ['Name']?>"><br>
-<input type="text" name="Input" value="<?php echo $row  ['Input']?>"><br>
-<input type="text" name="Output" value="<?php echo $row  ['Output']?>"><br>
-<input type="text" name="Total" value="<?php echo $row  ['Total']?>"><br>
-<input type="text" name="Information" value="<?php echo $row  ['Information']?>"><br>
-<input type="submit" name="edit" value="edit"> -->
-
 <h2 class="py-4">Edit Data</h2>
 
 <div  style="width:120%; background-color:#377BE1;" ><h3 class="p-3 text-white">Form Edit Data</h3></div>
@@ -83,7 +73,7 @@ if (isset($_POST ['edit'])){
     $update = $conn->query ( "UPDATE tb_class_cash SET Id='$Id', Date ='$Date', Name='$Name', Input='$Input', Output='$Output', Total='$Total', Information='$Information' WHERE Id='$Id' ");
 
     if ($update){
-        header('location:index.php?page=Buku');
+       echo "Berhasil";
     }else {
         
         echo "maaf gagal merubah data";

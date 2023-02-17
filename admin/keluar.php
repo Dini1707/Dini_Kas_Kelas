@@ -7,7 +7,7 @@ if (isset ($_POST['add'])) {
     $Information = $_POST['Information'];
 
     
-    $add ="INSERT INTO tb_class_cash (Date, Name ,Input, Information ) VALUES ('$Date', '$Output', '$Information')";
+    $add ="INSERT INTO tb_output (Date, Name ,Input, Information ) VALUES ('$Date', '$Output', '$Information')";
 
     if ($conn->query ($add) === TRUE) {
        
@@ -17,7 +17,7 @@ if (isset ($_POST['add'])) {
 
     
 ?>
-
+<link rel="stylesheet" href="../style.css">
 <h2 class="py-4">Tambah Kas Keluar</h2>
 
 <div  style="width:120%; background-color:#377BE1;" ><h3 class="p-3 text-white">Form Kas Keluar</h3></div>

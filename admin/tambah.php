@@ -8,7 +8,7 @@ if (isset ($_POST['add'])) {
     $Information = $_POST['Information'];
 
     
-    $add ="INSERT INTO tb_class_cash (Date, Name ,Input, Information ) VALUES ('$Date', '$Name', '$Input', '$Information')";
+    $add ="INSERT INTO tb_input (Date,Name,Input,Information ) VALUES ('$Date', '$Name', '$Input', '$Information')";
 
     if ($conn->query ($add) === TRUE) {
        

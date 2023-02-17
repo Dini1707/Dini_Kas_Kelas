@@ -3,9 +3,9 @@ include "header.php";
 ?>
 
 <link rel="stylesheet" href="style.css">
-<nav class="navbar navbar-expand-lg position-fixed w-100">
+<nav class="navbar navbar-expand-lg position-fixed w-100 " style="height:10%;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Buku Kas Kelas</a>
+    <img src="img/logo.png" width="10%" alt="">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,16 +15,16 @@ include "header.php";
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#fitur">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ">Sign In</a>
+          <a class="nav-link"  href="login.php">Sign In</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ">Sign Up</a>
+          <a class="nav-link " href="#">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -32,12 +32,12 @@ include "header.php";
 </nav><br><br><br>
 
 
-<center>
+<center><br><br><br>
 <img src="img/ds.png" class="img-fluid" alt="...">
 </center><br>
 
 
-<section id="fitur">
+<section id="fitur"><br>
 <div class=" text-center" style="background-color:#8BB4D1;">
   <div class="row ">
 
@@ -51,7 +51,7 @@ include "header.php";
 
     <div class="col">
         <div class="p-5">
-            <img src="img/cn.png" alt="" class="img-fluid">
+            <img src="img/cn.png" alt="" class="img-fluid"><br>
             <h3>Online - Cloud Based</h3>
             <p>BukuKas adalah aplikasi berbasis cloud, artinya aplikasi tersebut sudah terinstal di internet. Anda hanya perlu koneksi internet agar dapat langsung menggunakan Buku Kas dari mana saja dan kapan saja</p>
         </div>
@@ -59,7 +59,7 @@ include "header.php";
 
 
     <div class="col">
-        <div class="p-5"><img src="img/gr.png" alt="" class="img-fluid">
+        <div class="p-5"><img src="img/gr.png" alt="" class="img-fluid"><br>
         <h3>Free!!!</h3>
         <p>Account STANDARD gratis untuk membuat invoice sebanyak-banyaknya sampai 100 customer dan 100 item. Untuk Account PROFESSIONAL hanya Rp 100,000.- per bulan unlimitted.</p>
         </div>
@@ -68,7 +68,7 @@ include "header.php";
 </div>
 </section><br><br>
 
-<section id="about">
+<section id="about"><br><br>
 <div class="">
     
   <div class="row gx-5  justify-content-center">
@@ -79,25 +79,25 @@ include "header.php";
     </div>
 
     <div class="col-4">
-      <div class="p-3">
-        <h2>Invoice Pemasukan & pengeluaran</h2><br><br>
+      <div class="p-3"><br>
+        <h2>Invoice Pemasukan & pengeluaran</h2><br>
         <p>Kini semua Invoice anda dapat terdata dengan rapih di BukuKas. Setiap Invoice memiliki label warna yang berbeda untuk memudahkan anda melihat Invoice.</p><br>
         <hr>
     </div>
     </div>
-</div>
+</div><br><br><br><br>
 
 
   <div class="row gx-5  justify-content-center" style="background-color:#8BB4D1;">
     <div class="col-4">
      <div class="p-5">
-        <h2>Hitung Saldo Kas</h2>
+        <h2>Hitung Saldo Kas</h2><br>
         <p>Dengan BukuKas, anda dapat langsung mengetahui jumlah uang yang ada saat itu juga. BukuKas akan secara otomatis mengurangi saldo apabila terjadi pengeluaran, dan menambahkan saldo setiap kali anda melakukan pemasukan.</p><br><hr>
      </div>
     </div>
 
     <div class="col-4">
-      <div class="p-3">
+      <div class="p-3"><br><br><br>
        <img src="img/bank.png" width="50%" alt="">
 
     </div>
@@ -107,7 +107,7 @@ include "header.php";
 
   <div class="row gx-5  justify-content-center" >
     <div class="col-4">
-     <div class="p-3">
+     <div class="p-3"><br><br>
        <img class="float-end" src="img/device.png" width="50%" alt="">
         
      </div>
@@ -115,12 +115,30 @@ include "header.php";
 
     <div class="col-4">
       <div class="p-5">
-      <h2>Hitung Saldo Kas</h2>
+      <h2>Hitung Saldo Kas</h2><br>
         <p>Dengan BukuKas, anda dapat langsung mengetahui jumlah uang yang ada saat itu juga. BukuKas akan secara otomatis mengurangi saldo apabila terjadi pengeluaran, dan menambahkan saldo setiap kali anda melakukan pemasukan.</p><br><hr>
 
     </div>
     </div>
 </div>
+
+
+<div class="row gx-5  justify-content-center" style="background-color:#8BB4D1;">
+    <div class="col-4">
+     <div class="p-5">
+        <h2>Laporan Lengkap</h2><br>
+        <p>Hanya dengan 1x click, anda langsung dapat melihat laporan-laporan anda seperti Laporan pemasukan, pengeluaran,dan total saldo dalam kurun waktu harian, mingguan dan bulanan.  </p><br><hr>
+     </div>
+    </div>
+
+    <div class="col-4">
+      <div class="p-3"><br><br><br>
+       <img src="img/lp.png" width="50%" alt="">
+
+    </div>
+    </div>
+</div>
+
 
 
   
