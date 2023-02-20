@@ -24,7 +24,7 @@ include "header.php";
           <a class="nav-link"  href="login.php">Sign In</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Sign Up</a>
+          <a class="nav-link " href="daftar.php">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -107,20 +107,20 @@ include "header.php";
 
   <div class="row gx-5  justify-content-center" >
     <div class="col-4">
-     <div class="p-3"><br><br>
+     <div class="p-3"><br><br><br><br>
        <img class="float-end" src="img/device.png" width="50%" alt="">
         
      </div>
-    </div>
+    </div><br><br>
 
     <div class="col-4">
-      <div class="p-5">
+      <div class="p-5"><br><br><br><br>
       <h2>Hitung Saldo Kas</h2><br>
         <p>Dengan BukuKas, anda dapat langsung mengetahui jumlah uang yang ada saat itu juga. BukuKas akan secara otomatis mengurangi saldo apabila terjadi pengeluaran, dan menambahkan saldo setiap kali anda melakukan pemasukan.</p><br><hr>
 
     </div>
     </div>
-</div>
+</div><br><br>
 
 
 <div class="row gx-5  justify-content-center" style="background-color:#8BB4D1;">
@@ -132,7 +132,7 @@ include "header.php";
     </div>
 
     <div class="col-4">
-      <div class="p-3"><br><br><br>
+      <div class="p-3"><br><br>
        <img src="img/lp.png" width="50%" alt="">
 
     </div>

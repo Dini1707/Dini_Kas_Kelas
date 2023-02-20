@@ -1,8 +1,9 @@
 <?php
+ob_start();
     include "../koneksi.php";
     include "../header.php";
     $Id =$_GET ['Id'];
-    $sql="SELECT * FROM tb_class_cash  WHERE Id='$Id'";
+    $sql="SELECT * FROM tb_input  WHERE Id='$Id'";
     $edit = $conn->query($sql);
 ?>
 <link rel="stylesheet" href="../style.css">
@@ -24,10 +25,6 @@ while ($row=$edit->fetch_assoc ()) {
     <input type="text" class="form-control from1 border border-2 border-dark rounded-4"  name="Id" placeholder="Id" aria-label="First name" id="Id" value="<?php echo $row['Id'];?>">
   </div>
   <div class="col-6 ">
-  <label for="Date">Date</label>
-    <input type="Date" class="form-control from1 border border-2 border-dark rounded-4"  name="Date" placeholder="Date" aria-label="First name" id="Date"  value="<?php echo $row['Id'];?>">
-  </div>
-  <div class="col-6 ">
   <label for="Nama">Nama</label>
     <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Name" placeholder="Name" aria-label="Last name" id="Nama"  value="<?php echo $row['Name'];?>">
   </div>
@@ -35,21 +32,14 @@ while ($row=$edit->fetch_assoc ()) {
  
   <div class="col-6 ">
   <label for="Input">Saldo Masuk</label>   
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Input" placeholder="Input" aria-label="First name" id="Input"  value="<?php echo $row['Input'];?>">
-  </div>
-  <div class="col-6 ">
-  <label for="Output">Saldo Keluar</label>   
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Output" placeholder="Output" aria-label="First name" id="output"  value="<?php echo $row['Output'];?>">
-  </div>
-  <div class="col-6 ">
-  <label for="Total">Total</label>   
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Total" placeholder="Total" aria-label="First name" id="Total"  value="<?php echo $row['Total'];?>">
+    <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Input" placeholder="Input" aria-label="First name" id="Input"  value="<?php echo $row['Input'];?>">
   </div>
   <div class="col-6 ">
   <label for="Dsc">Keterangan</label>   
     <input type="text" class="form-control from1 border border-2 border-dark rounded-4"  name="Information" placeholder="Information" aria-label="Last name" id="Dsc"  value="<?php echo $row['Information'];?>">
   </div>
-</div>
+</div><br>
+
 
 <div class="float-end btn btn-success">
     <img src="../img/kirim.png" width= 20px; alt="">
@@ -64,16 +54,14 @@ while ($row=$edit->fetch_assoc ()) {
 
 if (isset($_POST ['edit'])){
     $Id =$_POST  ['Id'];
-    $Date = $_POST ['Date'];
     $Name = $_POST ['Name'];
     $Input = $_POST ['Input'];
-    $Output = $_POST ['Output'];
-    $Total = $_POST ['Total'];
     $Information = $_POST ['Information'];
-    $update = $conn->query ( "UPDATE tb_class_cash SET Id='$Id', Date ='$Date', Name='$Name', Input='$Input', Output='$Output', Total='$Total', Information='$Information' WHERE Id='$Id' ");
+    $update = $conn->query ( "UPDATE tb_input SET Id='$Id',  Name='$Name', Input='$Input', Information='$Information' WHERE Id='$Id' ");
 
     if ($update){
-       echo "Berhasil";
+      header ("location:index.php?page=Buku");
+      ob_end_flush();
     }else {
         
         echo "maaf gagal merubah data";

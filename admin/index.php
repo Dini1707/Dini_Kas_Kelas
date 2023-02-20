@@ -48,7 +48,7 @@ echo $_SESSION['level'];
         </a>
       </li> -->
       <li>
-        <a href="index.php?page=Buku" class="nav-link link-dark">
+        <a href="index.php?page=data" class="nav-link link-dark">
         <img src="../img/laporan 2.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          Buku Kas
         </a>
@@ -58,7 +58,7 @@ echo $_SESSION['level'];
             Pengelolaan Kas
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="index.php?page=Pemasukan" style="color:black;"><img src="../img/pemasukan.png" width="25px"  alt=""> Pemasukan</a></li>
+            <li><a class="dropdown-item" href="index.php?page=Buku" style="color:black;"><img src="../img/pemasukan.png" width="25px"  alt=""> Pemasukan</a></li>
             <li><a class="dropdown-item" href="index.php?page=Pengeluaran" style="color:black;"><img src="../img/pengeluaran.png" width="25px" alt="">  Pengeluaran</a></li>
             <li><a class="dropdown-item" href="#" style="color:black;"><img src="../img/rekap.png" alt=""> Rekapitulasi </a></li>
           </ul>
@@ -121,6 +121,9 @@ if (isset($_GET['page'])) {
     case "edit":
       include "update.php";
       break;
+    case "data":
+      include "buku.php";
+      break;
     default:
     echo "halam ini gak ada";
       break;
@@ -131,9 +134,8 @@ if (isset($_GET['page'])) {
 ?>
 </main>
        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
 
 <?php
 include "../footer.php";

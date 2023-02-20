@@ -1,16 +1,30 @@
-<?php
-
+<?php 
+include "koneksi.php";
 include "header.php";
-?>
+if (isset ($_POST['add'])) {
+    $Name = $_POST['Name'];
+    $No  = $_POST['No Hp'];
+    $Address = $_POST['Address'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $role = $_POST['role'];
 
+    
+    $add ="INSERT INTO tb_user (Name,No Hp,Address, username, password,role ) VALUES ( '$Name', '$No', '$Address', '$username' , MD5('$password'), '$role')";
+
+    if ($conn->query ($add) === TRUE) {
+       
+    }
+        
+    }
+
+?>
 
 <link rel="stylesheet" href="style.css">
 <body style=" background-color: #7FA2BB;">
-<img src="img/logo.png" alt="" class="logo"><br>
        <p ><h5 class="judul">Harap Input  Username Dan Password</h5></p>
-       
 
-	   <div class="row justify-content-center">
+<div class="row justify-content-center">
 		<div class="col-2">
 		<form action="cek_login.php" method='post'>
   <div class="mb-4 pt-4" >
@@ -27,9 +41,6 @@ include "header.php";
 		</div>
 	   </div>
 
-</body>
-
-<?php
-
+<?php 
 include "footer.php";
 ?>

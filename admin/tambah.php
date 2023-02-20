@@ -2,13 +2,12 @@
 include "../koneksi.php";
 include "../header.php";
 if (isset ($_POST['add'])) {
-    $Date = $_POST['Date'];
     $Name = $_POST['Name'];
     $Input = $_POST['Input'];
     $Information = $_POST['Information'];
 
     
-    $add ="INSERT INTO tb_input (Date,Name,Input,Information ) VALUES ('$Date', '$Name', '$Input', '$Information')";
+    $add ="INSERT INTO tb_input (Name,Input,Information ) VALUES ( '$Name', '$Input', '$Information')";
 
     if ($conn->query ($add) === TRUE) {
        
@@ -25,10 +24,6 @@ if (isset ($_POST['add'])) {
 <div class="col-6 pt-5 offset-3 ">
 <form action=""  method="post"><br>
         <div class="row ">
-  <div class="col-6 ">
-  <label for="Date">Date</label>
-    <input type="Date" class="form-control from1 border border-2 border-dark rounded-4"  name="Date" placeholder="Date" aria-label="First name" id="Date" >
-  </div>
   <div class="col-6">
   <label for="Nama">Nama</label>
     <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Name" placeholder="Name" aria-label="Last name" id="Nama">
@@ -37,7 +32,7 @@ if (isset ($_POST['add'])) {
  
   <div class="col-6 my-5">
   <label for="Input">Saldo Masuk</label>   
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Input" placeholder="Input" aria-label="First name" id="Input">
+    <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Input" placeholder="Input" aria-label="First name" id="Input">
   </div>
   <div class="col-6 my-5">
   <label for="Dsc">Keterangan</label>   
