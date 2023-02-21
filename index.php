@@ -20,12 +20,7 @@ include "header.php";
         <li class="nav-item">
           <a class="nav-link" href="#about">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link"  href="login.php">Sign In</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="daftar.php">Sign Up</a>
-        </li>
+        
       </ul>
     </div>
   </div>
@@ -33,7 +28,8 @@ include "header.php";
 
 
 <center><br><br><br>
-<img src="img/ds.png" class="img-fluid" alt="...">
+<img src="img/ds.png" class="img-fluid" alt="..."><br><br>
+<a href="login.php"><button class="btn btn-outline-primary">Get Started</button></a>
 </center><br>
 
 

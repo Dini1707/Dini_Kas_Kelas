@@ -10,14 +10,13 @@ include "../koneksi.php";
             <tr>
                 <td>ID</td>
                 <td>DATE</td>
-                <td>NAME</td>
-                <td>INPUT</td>
+                <td>OUTPUT</td>
                 <td>INFORMATION</td>
                 <td>ACTION</td>
             </tr>
 
             <?php 
-            $sql = "SELECT * FROM tb_input";
+            $sql = "SELECT * FROM tb_output";
             $result = $conn->query($sql);
             $data = 1;
             while ($row=$result->fetch_assoc()) {
@@ -25,11 +24,10 @@ include "../koneksi.php";
                 <tr>
                     <td><?php echo $data++?></td>
                     <td><?php echo $row["Date"]?></td>
-                    <td><?php echo $row["Name"]?></td>
-                    <td><?php echo $row["Input"]?></td>
+                    <td><?php echo $row["Output"]?></td>
                     <td><?php echo $row["Information"]?></td>
                     <td><a href="index.php?page=edit&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
-                    <a href="delete_in.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>
+                    <a href="delete_out.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>
                 </tr>
                     <?php
                         }

@@ -116,7 +116,7 @@ if (isset($_GET['page'])) {
       include "tampil.php";
       break;
     case "Pengeluaran":
-      include "keluar.php";
+      include "kurang.php";
       break;
     case "edit":
       include "update.php";
