@@ -1,4 +1,4 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "db_ujikom") or die ("error");
+$conn = new mysqli("localhost", "root", "", "db_kas_kelas") or die ("error");
 ?>
 
