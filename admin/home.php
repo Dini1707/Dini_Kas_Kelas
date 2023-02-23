@@ -1,4 +1,6 @@
-
+<?php 
+include "../header.php";
+?>
 
 <link rel="stylesheet" href="../style.css" type="text/css">
 
@@ -29,3 +31,6 @@
 <main>
 
 
+<?php 
+include "../footer.php";
+?>

@@ -3,11 +3,11 @@ include "../koneksi.php";
 include "../header.php";
 if (isset ($_POST['add'])) {
     $Name = $_POST['Name'];
-    $Input = $_POST['Input'];
+    $Input = $_POST['Saldo'];
     $Information = $_POST['Information'];
 
     
-    $add ="INSERT INTO tb_input (Name,Input,Information ) VALUES ( '$Name', '$Input', '$Information')";
+    $add ="INSERT INTO tb_input (Name,Saldo,Information ) VALUES ( '$Name', '$Input', '$Information')";
 
     if ($conn->query ($add) === TRUE) {
        
@@ -34,7 +34,7 @@ if (isset ($_POST['add'])) {
   <div class="">
     <div >
       <label for="Input">Saldo Masuk</label>   
-        <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Input" placeholder="Input" aria-label="First name" id="Input">
+        <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Saldo" placeholder="Input" aria-label="First name" id="Input">
     </div>
   </div>
   </div>

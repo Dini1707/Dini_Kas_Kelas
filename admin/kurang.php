@@ -5,7 +5,7 @@ include "../koneksi.php";
 <link rel="stylesheet" href="../style.css" type="text/css">
         <div class="">
             <div class="pt-5">
-            <a href="index.php?page=Pemasukan" class="ms-5 ps-5"><button class="btn btn-outline-secondary" type="submit">Tambah</button></a><br>    
+            <a href="index.php?page=kurang" class="ms-5 ps-5"><button class="btn btn-outline-secondary" type="submit">Tambah</button></a><br>    
             <table border=1; class="table table-info table-striped offset-1" ><br>
             <tr>
                 <td>ID</td>
@@ -24,7 +24,7 @@ include "../koneksi.php";
                 <tr>
                     <td><?php echo $data++?></td>
                     <td><?php echo $row["Date"]?></td>
-                    <td><?php echo $row["Output"]?></td>
+                    <td><?php echo $row["Saldo"]?></td>
                     <td><?php echo $row["Information"]?></td>
                     <td><a href="index.php?page=edit&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
                     <a href="delete_out.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>

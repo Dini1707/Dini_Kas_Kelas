@@ -78,10 +78,10 @@ echo $_SESSION['level'];
       <section id="content">
         <nav  class="shadow" style="height: 80px;">
          <h3 class="mx-3 py-4" >Buku Kas Kelas</h3>
-         <div class="input-group">
+         <!-- <div class="input-group">
   <input type="text" class="form-control"  placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <span class="input-group-text" id="basic-addon2" ><i class='fs-3 py-1 bx bx-search icon'></i></span>
-</div>
+</div> -->
         <!-- <div class="input-group  "> 
 
   <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" id="input">
@@ -123,6 +123,9 @@ if (isset($_GET['page'])) {
       break;
     case "data":
       include "buku.php";
+      break;
+    case "kurang":
+      include "keluar.php";
       break;
     default:
     echo "halam ini gak ada";
