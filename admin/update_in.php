@@ -32,7 +32,7 @@ while ($row=$edit->fetch_assoc ()) {
  
   <div class="col-6 ">
   <label for="Input">Saldo Masuk</label>   
-    <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Input" placeholder="Input" aria-label="First name" id="Input"  value="<?php echo $row['Input'];?>">
+    <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Saldo" placeholder="Input" aria-label="First name" id="Saldo"  value="<?php echo $row['Saldo'];?>">
   </div>
   <div class="col-6 ">
   <label for="Dsc">Keterangan</label>   
@@ -55,9 +55,9 @@ while ($row=$edit->fetch_assoc ()) {
 if (isset($_POST ['edit'])){
     $Id =$_POST  ['Id'];
     $Name = $_POST ['Name'];
-    $Input = $_POST ['Input'];
+    $Saldo = $_POST ['Saldo'];
     $Information = $_POST ['Information'];
-    $update = $conn->query ( "UPDATE tb_input SET Id='$Id',  Name='$Name', Input='$Input', Information='$Information' WHERE Id='$Id' ");
+    $update = $conn->query ( "UPDATE tb_input SET Id='$Id',  Name='$Name', Saldo='$Saldo', Information='$Information' WHERE Id='$Id' ");
 
     if ($update){
       header ("location:index.php?page=Buku");
