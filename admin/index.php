@@ -58,7 +58,7 @@ echo $_SESSION['level'];
             Pengelolaan Kas
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="index.php?page=Buku" style="color:black;"><img src="../img/pemasukan.png" width="25px"  alt=""> Pemasukan</a></li>
+            <li><a class="dropdown-item" href="index.php?page=masuk" style="color:black;"><img src="../img/pemasukan.png" width="25px"  alt=""> Pemasukan</a></li>
             <li><a class="dropdown-item" href="index.php?page=Pengeluaran" style="color:black;"><img src="../img/pengeluaran.png" width="25px" alt="">  Pengeluaran</a></li>
             <li><a class="dropdown-item" href="#" style="color:black;"><img src="../img/rekap.png" alt=""> Rekapitulasi </a></li>
           </ul>
@@ -112,14 +112,17 @@ if (isset($_GET['page'])) {
     case 'home':
       include "home.php";
       break;
-    case "Buku":
-      include "tampil.php";
+    case "masuk":
+      include "tampil_in.php";
       break;
     case "Pengeluaran":
       include "kurang.php";
       break;
-    case "edit":
-      include "update.php";
+    case "edit_in":
+      include "update_in.php";
+      break;
+    case "edit_out":
+      include "update_out.php";
       break;
     case "data":
       include "buku.php";

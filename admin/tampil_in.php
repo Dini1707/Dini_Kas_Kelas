@@ -28,7 +28,7 @@ include "../koneksi.php";
                     <td><?php echo $row["Name"]?></td>
                     <td><?php echo $row["Saldo"]?></td>
                     <td><?php echo $row["Information"]?></td>
-                    <td><a href="index.php?page=edit&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
+                    <td><a href="index.php?page=edit_in&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
                     <a href="delete_in.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>
                 </tr>
                     <?php

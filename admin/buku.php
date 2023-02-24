@@ -44,7 +44,7 @@ include "../koneksi.php";
         $row = mysqli_fetch_assoc($result); 
         $sum = $row['Saldo'];
     ?><br><br>
-     <p class="m-3 ps-5">Total Pemasukan : <?php echo $sum ?></p>
+     <p class="m-3 ps-5" style="font-family:'Gill Sans';">Total Pengeluaran : <?php echo $sum ?></p>
             <table border=1; class="table table-info table-striped offset-1" >
             <tr>
                 <td>ID</td>

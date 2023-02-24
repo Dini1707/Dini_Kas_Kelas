@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 include "../koneksi.php";
 include "../header.php";
 if (isset ($_POST['add'])) {
@@ -10,7 +11,12 @@ if (isset ($_POST['add'])) {
     $add ="INSERT INTO tb_input (Name,Saldo,Information ) VALUES ( '$Name', '$Input', '$Information')";
 
     if ($conn->query ($add) === TRUE) {
-       
+      header ("location:index.php?page=masuk");
+        ob_end_flush();
+      }else {
+          
+          echo "maaf gagal merubah data";
+     
     }
         
     }
