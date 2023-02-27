@@ -53,6 +53,13 @@ echo $_SESSION['level'];
          Buku Kas
         </a>
       </li>
+      <li>
+        <a href="index.php?page=anggota" class="nav-link link-dark">
+        <img src="../img/add.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
+         Tambah Anggota
+        </a>
+      </li>
+      
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" class="icon" >
             Pengelolaan Kas
@@ -60,7 +67,6 @@ echo $_SESSION['level'];
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="index.php?page=masuk" style="color:black;"><img src="../img/pemasukan.png" width="25px"  alt=""> Pemasukan</a></li>
             <li><a class="dropdown-item" href="index.php?page=Pengeluaran" style="color:black;"><img src="../img/pengeluaran.png" width="25px" alt="">  Pengeluaran</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;"><img src="../img/rekap.png" alt=""> Rekapitulasi </a></li>
           </ul>
         </li><br><br><br><br><br>
 
@@ -95,7 +101,7 @@ echo $_SESSION['level'];
 
 
       </section>
-      <main class="col-md-8 offset-md-2  pt-5"><br>
+      <main class="col-lg-9 offset-lg-2  pt-5"><br>
 
     
 <?php
@@ -129,6 +135,12 @@ if (isset($_GET['page'])) {
       break;
     case "kurang":
       include "keluar.php";
+      break;
+    case "anggota":
+      include "add_user.php";
+      break;
+    case "Tampil_user":
+      include "tampil_user.php";
       break;
     default:
     echo "halam ini gak ada";

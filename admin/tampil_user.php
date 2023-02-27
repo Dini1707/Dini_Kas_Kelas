@@ -3,31 +3,30 @@ include "../header.php";
 include "../koneksi.php";
 ?>
 <link rel="stylesheet" href="../style.css" type="text/css">
-        <div class="">
-            <div class="pt-5">
-            <a href="index.php?page=kurang" class="ms-5 ps-5"><button class="btn btn-outline-secondary" type="submit">Tambah</button></a><br>    
+        <div class="row">
+            <div class="pt-5 col-10">
+            <a href="index.php?page=anggota" class="ms-5 ps-5"><button class="btn btn-outline-secondary" type="submit">Tambah</button></a><br>    
             <table border=1; class="table table-info table-striped offset-1" ><br>
             <tr>
-                <td>ID</td>
-                <td>DATE</td>
-                <td>OUTPUT</td>
-                <td>INFORMATION</td>
-                <td>ACTION</td>
+                <td>NO</td>
+                <td>NISN</td>
+                <td>NAME</td>
+                <td>KELAS</td>
+                <td>JENIS KELAMIN</td>
             </tr>
 
             <?php 
-            $sql = "SELECT * FROM tb_output  ORDER BY Id DESC";
+            $sql = "SELECT * FROM tb_student_list  ORDER BY Id DESC";
             $result = $conn->query($sql);
             $data = 1;
             while ($row=$result->fetch_assoc()) {
              ?>
                 <tr>
                     <td><?php echo $data++?></td>
-                    <td><?php echo $row["Date"]?></td>
-                    <td><?php echo $row["Saldo"]?></td>
-                    <td><?php echo $row["Information"]?></td>
-                    <td><a href="index.php?page=edit_out&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
-                    <a href="delete_out.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>
+                    <td><?php echo $row["Nisn"]?></td>
+                    <td><?php echo $row["Name"]?></td>
+                    <td><?php echo $row["Class"]?></td>
+                    <td><?php echo $row["Gender"]?></td>
                 </tr>
                     <?php
                         }
