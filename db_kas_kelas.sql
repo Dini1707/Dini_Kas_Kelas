@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Feb 2023 pada 02.10
+-- Waktu pembuatan: 28 Feb 2023 pada 03.04
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -24,30 +24,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_class_cash`
---
-
-CREATE TABLE `tb_class_cash` (
-  `Id` int(11) NOT NULL,
-  `Date` date NOT NULL,
-  `Name` varchar(45) NOT NULL,
-  `Input` float NOT NULL,
-  `Output` float NOT NULL,
-  `Total` float NOT NULL,
-  `Information` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `tb_input`
 --
 
 CREATE TABLE `tb_input` (
   `Id` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
-  `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `Input` double NOT NULL,
+  `Date` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `Saldo` double NOT NULL,
   `Information` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -55,9 +39,9 @@ CREATE TABLE `tb_input` (
 -- Dumping data untuk tabel `tb_input`
 --
 
-INSERT INTO `tb_input` (`Id`, `Name`, `Date`, `Input`, `Information`) VALUES
-(1, 'dii', '2023-02-21 00:44:44', 600, 'Saldo'),
-(3, 'dii', '2023-02-22 00:55:26', 20000, 'vgfytg8g8');
+INSERT INTO `tb_input` (`Id`, `Name`, `Date`, `Saldo`, `Information`) VALUES
+(3, 'dini', '2023-02-20 10:01:45', 20000, 'p'),
+(4, 'uyu', '2023-02-23 08:50:57', 700000, 'naon');
 
 -- --------------------------------------------------------
 
@@ -67,8 +51,8 @@ INSERT INTO `tb_input` (`Id`, `Name`, `Date`, `Input`, `Information`) VALUES
 
 CREATE TABLE `tb_output` (
   `Id` int(11) NOT NULL,
-  `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `Output` double NOT NULL,
+  `Date` datetime NOT NULL,
+  `Saldo` double NOT NULL,
   `Information` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -76,9 +60,8 @@ CREATE TABLE `tb_output` (
 -- Dumping data untuk tabel `tb_output`
 --
 
-INSERT INTO `tb_output` (`Id`, `Date`, `Output`, `Information`) VALUES
-(1, '0000-00-00 00:00:00', 0, 'saldo'),
-(2, '2023-02-21 02:51:16', 0, 'Saldo');
+INSERT INTO `tb_output` (`Id`, `Date`, `Saldo`, `Information`) VALUES
+(1, '2023-02-20 04:14:51', 33, 'dadsaf');
 
 -- --------------------------------------------------------
 
@@ -90,8 +73,34 @@ CREATE TABLE `tb_student_list` (
   `Id` int(11) NOT NULL,
   `Nisn` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
-  `Gender` enum('L',' P') NOT NULL
+  `Class` varchar(11) NOT NULL,
+  `Gender` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_student_list`
+--
+
+INSERT INTO `tb_student_list` (`Id`, `Nisn`, `Name`, `Class`, `Gender`) VALUES
+(22, 12345, 'Adelia fitriani', '12 Rpl 3', 'Perempuan'),
+(23, 23456, 'Adi Adriansyah', '12 Rpl 3', 'Laki-Laki'),
+(24, 34567, 'Ai Rika Amelia', '12 Rpl 3', 'Perempuan'),
+(25, 45678, 'Azriel Fahmi', '12 Rpl 3', 'Laki-Laki'),
+(26, 56789, 'Annisa Nurlaely A', '12 Rpl 3', 'Perempuan'),
+(27, 280405, 'Dini Rahma Aprilianti', '12 Rpl 3', 'Perempuan'),
+(28, 908070, 'Anisa Putri Rahayu', '12 Rpl 3', 'Perempuan'),
+(29, 405060, 'Ashfiyyah Saddiqa', '12 Rpl 3', 'Perempuan'),
+(30, 506050, 'Fathir Rahman H', '12 Rpl 3', 'Laki-Laki'),
+(31, 607050, 'Fauzan Abdurahman', '12 Rpl 3', 'Laki-Laki'),
+(32, 708050, 'Gilang Angga', '12 Rpl 3', 'Laki-Laki'),
+(33, 896050, 'Gina Rahayu', '12 Rpl 3', 'Perempuan'),
+(34, 106050, 'Habib', '12 Rpl 3', 'Laki-Laki'),
+(35, 296050, 'Haifa Luri ', '12 Rpl 3', 'Perempuan'),
+(36, 396050, 'Lukman Nurhakim', '12 Rpl 3', 'Perempuan'),
+(37, 203050, 'M Arshal', '12 Rpl 3', 'Laki-Laki'),
+(38, 304050, 'M Dilal Fadhilah', '12 Rpl 3', 'Laki-Laki'),
+(39, 506070, 'M Ikbal Firdaus', '12 Rpl 3', 'Laki-Laki'),
+(41, 507070, 'Rizki Firmansyah', '12 Rpl 3', 'Laki-Laki');
 
 -- --------------------------------------------------------
 
@@ -122,12 +131,6 @@ INSERT INTO `tb_user` (`Id`, `Name`, `No Hp`, `Address`, `username`, `password`,
 --
 
 --
--- Indeks untuk tabel `tb_class_cash`
---
-ALTER TABLE `tb_class_cash`
-  ADD PRIMARY KEY (`Id`);
-
---
 -- Indeks untuk tabel `tb_input`
 --
 ALTER TABLE `tb_input`
@@ -143,7 +146,8 @@ ALTER TABLE `tb_output`
 -- Indeks untuk tabel `tb_student_list`
 --
 ALTER TABLE `tb_student_list`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `Nisn` (`Nisn`);
 
 --
 -- Indeks untuk tabel `tb_user`
@@ -157,22 +161,22 @@ ALTER TABLE `tb_user`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tb_class_cash`
---
-ALTER TABLE `tb_class_cash`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT untuk tabel `tb_input`
 --
 ALTER TABLE `tb_input`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_output`
 --
 ALTER TABLE `tb_output`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_student_list`
+--
+ALTER TABLE `tb_student_list`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`
