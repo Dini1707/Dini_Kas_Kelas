@@ -44,7 +44,7 @@ include "../koneksi.php";
                     $query = "SELECT * FROM tb_input  WHERE Name LIKE '%$Name%'";
                     $result= $conn->query($query);
                 }else {
-                    $batas = 2;
+                    $batas = 10;
                     $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
                     $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
     
