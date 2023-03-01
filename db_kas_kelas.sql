@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Feb 2023 pada 03.04
+-- Waktu pembuatan: 01 Mar 2023 pada 06.26
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tb_input` (
   `Id` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
-  `Date` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `Saldo` double NOT NULL,
   `Information` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,8 +40,9 @@ CREATE TABLE `tb_input` (
 --
 
 INSERT INTO `tb_input` (`Id`, `Name`, `Date`, `Saldo`, `Information`) VALUES
-(3, 'dini', '2023-02-20 10:01:45', 20000, 'p'),
-(4, 'uyu', '2023-02-23 08:50:57', 700000, 'naon');
+(3, 'dini', '2023-02-20 03:01:45', 20000, 'p'),
+(5, 'dini', '2023-03-01 01:43:06', 3000, 'sapu'),
+(6, 'adel', '2023-03-01 02:15:53', 5000, 'keluar');
 
 -- --------------------------------------------------------
 
@@ -51,7 +52,7 @@ INSERT INTO `tb_input` (`Id`, `Name`, `Date`, `Saldo`, `Information`) VALUES
 
 CREATE TABLE `tb_output` (
   `Id` int(11) NOT NULL,
-  `Date` datetime NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `Saldo` double NOT NULL,
   `Information` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -61,7 +62,9 @@ CREATE TABLE `tb_output` (
 --
 
 INSERT INTO `tb_output` (`Id`, `Date`, `Saldo`, `Information`) VALUES
-(1, '2023-02-20 04:14:51', 33, 'dadsaf');
+(1, '2023-02-19 21:14:51', 33, 'dadsaf'),
+(2, '0000-00-00 00:00:00', 3000, 'keluar'),
+(3, '2023-03-01 03:06:12', 1000, 'kluar');
 
 -- --------------------------------------------------------
 
@@ -164,13 +167,13 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT untuk tabel `tb_input`
 --
 ALTER TABLE `tb_input`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_output`
 --
 ALTER TABLE `tb_output`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_student_list`
