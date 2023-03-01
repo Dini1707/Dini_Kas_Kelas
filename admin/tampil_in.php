@@ -30,61 +30,70 @@ include "../koneksi.php";
         
         ?> <br>
             <table border=1; class="table table-info table-striped" >
-            <tr>
-                <td>ID</td>
-                <td>DATE</td>
-                <td>NAME</td>
-                <td>INPUT</td>
-                <td>INFORMATION</td>
-                <td>ACTION</td>
-            </tr>
-            <?php 
-             if(isset($_GET['search'])){
-                $Name = $_GET['search'];
-        
-                $query = "SELECT * FROM tb_input  WHERE Name LIKE '%$Name%'";
-                $result= $conn->query($query);
-            }else {
-                
-                $query = "SELECT * FROM tb_input  ORDER BY Id DESC";
-                $result= $conn->query($query);
-            }
-           
-            $data = 1;
-            while ($row=$result->fetch_assoc()) {
-             ?>
                 <tr>
-                <td><?php echo $data++?></td>
-                    <td><?php echo $row["Date"]?></td>
-                    <td><?php echo $row["Name"]?></td>
-                    <td><?php echo $row["Saldo"]?></td>
-                    <td><?php echo $row["Information"]?></td>
-                    <td><a href="index.php?page=edit_in&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
-                    <a href="delete_in.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>
+                    <td>ID</td>
+                    <td>DATE</td>
+                    <td>NAME</td>
+                    <td>INPUT</td>
+                    <td>INFORMATION</td>
+                    <td>ACTION</td>
                 </tr>
-                    <?php
-                        }
-                ?>
+                <?php 
+                if(isset($_GET['search'])){
+                    $Name = $_GET['search'];
+                    $query = "SELECT * FROM tb_input  WHERE Name LIKE '%$Name%'";
+                    $result= $conn->query($query);
+                }else {
+                    $batas = 2;
+                    $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+                    $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
+    
+                    $previous = $halaman - 1;
+                    $next = $halaman + 1;
+                    
+                    $data = mysqli_query($conn,"SELECT * FROM tb_input");
+                    $jumlah_data = mysqli_num_rows($data);
+                    $total_halaman = ceil($jumlah_data / $batas);
+    
+                    $data_pegawai = "SELECT * FROM tb_input limit $halaman_awal, $batas";
+                    $nomor = $halaman_awal+1;
+                    //$query = "SELECT * FROM tb_input  ORDER BY Id DESC";
+                    $result= $conn->query($data_pegawai);
+                }
             
-            <!-- <?php 
-            $sql = "SELECT * FROM tb_input  ORDER BY Id DESC";
-            $result = $conn->query($sql);
-            $data = 1;
-            while ($row=$result->fetch_assoc()) {
-             ?>
-                <tr>
-                    <td><?php echo $data++?></td>
-                    <td><?php echo $row["Date"]?></td>
-                    <td><?php echo $row["Name"]?></td>
-                    <td><?php echo $row["Saldo"]?></td>
-                    <td><?php echo $row["Information"]?></td>
-                    <td><a href="index.php?page=edit_in&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
-                    <a href="delete_in.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>
-                </tr>
-                    <?php
-                        }
-                ?> -->
+                $no = 1;
+                while ($row=$result->fetch_array()) {
+                ?>
+                    <tr>
+                        <td><?php echo $no++?></td>
+                        <td><?php echo $row["Date"]?></td>
+                        <td><?php echo $row["Name"]?></td>
+                        <td><?php echo $row["Saldo"]?></td>
+                        <td><?php echo $row["Information"]?></td>
+                        <td><a href="index.php?page=edit_in&Id=<?php echo $row['Id']?>" ><img src="../img/edit.png"  alt=""></a>
+                        <a href="delete_in.php?Id=<?php echo $row['Id']?>"><img src="../img/delete.png" alt=""></a></td>
+                    </tr>
+                <?php
+                }
+                ?>
             </table>
+            <nav style="background-color: none;">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous&page=masuk'"; } ?>>Previous</a>
+                    </li>
+                    <?php 
+                    for($x=1;$x<=$total_halaman;$x++){
+                        ?> 
+                        <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>&page=masuk"><?php echo $x; ?></a></li>
+                        <?php
+                    }
+                    ?>				
+                    <li class="page-item">
+                        <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next&page=masuk'"; } ?>>Next</a>
+                    </li>
+                </ul>
+            </nav>
             </div>
         
 
