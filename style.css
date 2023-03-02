@@ -46,7 +46,6 @@ nav{
  color: #000000;
 }
 nav .input-group{
-  position: relative;
   left: 55%;
   top: -75px;
   width: 25%;
@@ -208,3 +207,8 @@ div.p-3{
 } */
 
 
+
+
+.cari{
+  display: inline-block;
+}
