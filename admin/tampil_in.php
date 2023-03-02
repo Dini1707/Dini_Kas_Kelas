@@ -44,7 +44,7 @@ include "../koneksi.php";
                     $query = "SELECT * FROM tb_input  WHERE Name LIKE '%$Name%'";
                     $result= $conn->query($query);
                 }else {
-                    $batas = 10;
+                    $batas = 5;
                     $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
                     $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
     
@@ -76,6 +76,14 @@ include "../koneksi.php";
                 <?php
                 }
                 ?>
+                <tr>
+                    <th>Total :</th>
+                    <th></th>
+                    <th></th>
+                    <th><?php echo $sum;?></th>
+                    <th></th>
+                    <th></th>
+                </tr>
             </table>
             <nav style="background-color: none;">
                 <ul class="pagination justify-content-center">

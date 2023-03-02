@@ -2,6 +2,19 @@
 include "isi.php";
 include "../koneksi.php";
 ?>
+
+ <?php
+        $result = mysqli_query($conn, 'SELECT SUM(Saldo) AS Saldo FROM tb_input'); 
+        $row = mysqli_fetch_assoc($result); 
+        $sum1 = $row['Saldo'];
+    ?>
+
+<?php
+        $result = mysqli_query($conn, 'SELECT SUM(Saldo) AS Saldo FROM tb_output'); 
+        $row = mysqli_fetch_assoc($result); 
+        $sum2 = $row['Saldo'];
+    ?>
+
 <link rel="stylesheet" href="../style.css" type="text/css">
 <div class="row">
     <div class="col-4 pt-4  ">
@@ -10,12 +23,8 @@ include "../koneksi.php";
 </div>
         <div class="row">
             <div class="col-6">
-            <?php
-        $result = mysqli_query($conn, 'SELECT SUM(Saldo) AS Saldo FROM tb_input'); 
-        $row = mysqli_fetch_assoc($result); 
-        $sum = $row['Saldo'];
-    ?><br><br>
-     <p class="m-3 ps-5" style="font-family:'Gill Sans';">Total Pemasukan : <?php echo $sum ?></p>
+           <br><br>
+     <p class="m-3 ps-5" style="font-family:'Gill Sans';">Total Pemasukan : <?php echo $sum1 ?></p>
      <fieldset id="print">
             <table border=1; class="table table-info table-striped offset-1" >
             <tr>
@@ -40,17 +49,19 @@ include "../koneksi.php";
                     <?php
                         }
                 ?>
+                <tr>
+                    <th>Total :</th>
+                    <th></th>
+                    <th><?php echo $sum1;?></th>
+                    <th></th>
+                </tr>
             </table>
             </div>
 
 
             <div class="col-6">
-            <?php
-        $result = mysqli_query($conn, 'SELECT SUM(Saldo) AS Saldo FROM tb_output'); 
-        $row = mysqli_fetch_assoc($result); 
-        $sum = $row['Saldo'];
-    ?><br><br>
-     <p class="m-3 ps-5" style="font-family:'Gill Sans';">Total Pengeluaran : <?php echo $sum ?></p>
+            <br><br>
+     <p class="m-3 ps-5" style="font-family:'Gill Sans';">Total Pengeluaran : <?php echo $sum2 ?></p>
             <table border=1; class="table table-info table-striped offset-1" >
             <tr>
                 <td>ID</td>
@@ -75,6 +86,12 @@ include "../koneksi.php";
                     <?php
                         }
                 ?>
+                <tr>
+                    <th>Total :</th>
+                    <th></th>
+                    <th><?php echo $sum2;?></th>
+                    <th></th>
+                </tr>
             </table>
             </fieldset>
             </div>
