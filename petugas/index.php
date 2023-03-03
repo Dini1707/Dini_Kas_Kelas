@@ -35,7 +35,7 @@ echo $_SESSION['level'];
           Home
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a href="index.php?page=Pemasukan" class="nav-link link-dark">
         <img src="../img/pemasukan.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          pemasukan
@@ -46,21 +46,24 @@ echo $_SESSION['level'];
         <img src="../img/pengeluaran.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          pengeluaran 
         </a>
-      </li>
+      </li> -->
       <li>
-        <a href="index.php?page=Buku" class="nav-link link-dark">
+        <a href="index.php?page=data" class="nav-link link-dark">
         <img src="../img/laporan 2.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          Buku Kas
         </a>
       </li>
+      <li>
+      
+      </li>
+      
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" class="icon" >
-            Laporan 
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" class="icon" >
+            Pengelolaan Kas
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Harian</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;">  >Laporan Mingguan</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Bulanan </a></li>
+            <li><a class="dropdown-item" href="index.php?page=masuk" style="color:black;"><img src="../img/pemasukan.png" width="25px"  alt=""> Pemasukan</a></li>
+            <li><a class="dropdown-item" href="index.php?page=Pengeluaran" style="color:black;"><img src="../img/pengeluaran.png" width="25px" alt="">  Pengeluaran</a></li>
           </ul>
         </li><br><br><br><br><br>
 
@@ -78,10 +81,10 @@ echo $_SESSION['level'];
       <section id="content">
         <nav  class="shadow" style="height: 80px;">
          <h3 class="mx-3 py-4" >Buku Kas Kelas</h3>
-         <div class="input-group">
+         <!-- <div class="input-group">
   <input type="text" class="form-control"  placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
   <span class="input-group-text" id="basic-addon2" ><i class='fs-3 py-1 bx bx-search icon'></i></span>
-</div>
+</div> -->
         <!-- <div class="input-group  "> 
 
   <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" id="input">
@@ -95,7 +98,7 @@ echo $_SESSION['level'];
 
 
       </section>
-      <main class="col-md-8 offset-md-2  pt-5"><br>
+      <main class="col-lg-9 offset-lg-2  pt-5"><br>
 
     
 <?php
@@ -112,11 +115,29 @@ if (isset($_GET['page'])) {
     case 'home':
       include "home.php";
       break;
-    case "Buku":
-      include "tampil.php";
+    case "masuk":
+      include "tampil_in.php";
       break;
     case "Pengeluaran":
+      include "tampil_out.php";
+      break;
+    case "edit_in":
+      include "update_in.php";
+      break;
+    case "edit_out":
+      include "update_out.php";
+      break;
+    case "data":
+      include "buku.php";
+      break;
+    case "kurang":
       include "keluar.php";
+      break;
+    case "anggota":
+      include "add_user.php";
+      break;
+    case "Tampil_user":
+      include "tampil_user.php";
       break;
     default:
     echo "halam ini gak ada";
@@ -128,9 +149,8 @@ if (isset($_GET['page'])) {
 ?>
 </main>
        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
 
 <?php
 include "../footer.php";

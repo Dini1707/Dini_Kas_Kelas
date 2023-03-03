@@ -48,17 +48,18 @@ echo $_SESSION['level'];
         </a>
       </li> -->
       <li>
-        <a href="index.php?page=data" class="nav-link link-dark">
-        <img src="../img/laporan 2.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
-         Buku Kas
-        </a>
-      </li>
-      <li>
         <a href="index.php?page=anggota" class="nav-link link-dark">
         <img src="../img/add.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          Tambah Anggota
         </a>
       </li>
+      <li>
+        <a href="index.php?page=data" class="nav-link link-dark">
+        <img src="../img/laporan 2.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
+         Buku Kas
+        </a>
+      </li>
+     
       
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" class="icon" >

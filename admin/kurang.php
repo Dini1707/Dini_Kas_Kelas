@@ -11,9 +11,9 @@ include "../koneksi.php";
 
     <div class="col-4">
         <form class="d-flex" method="GET" action="">
-      <div class="input-group"><input  type="date" name="page" value="Pengeluaran" hidden>
-      <input class="form-control " type="date" name="search" placeholder="Search" >
-     <button class="btn btn-outline-secondary" type="submit" value="search" ><i class='bx bx-search'></i></button></div>
+      <div class="input-group"><input  type="date" name="page" value="Pengeluaran" hidden data-date-format="YYYY-mm-DD">
+      <input class="form-control" type="date" name="search" 
+data-date-format="YYYY-mm-DD" placeholder="yyyy-mm-dd" required autofocus>     <button class="btn btn-outline-secondary" type="submit" value="search" ><i class='bx bx-search'></i></button></div>
     </form>
 </div>
 </div>
@@ -30,8 +30,27 @@ include "../koneksi.php";
             </tr>
 
             <?php 
-            $sql = "SELECT * FROM tb_output  ORDER BY Id DESC";
-            $result = $conn->query($sql);
+           if(isset($_GET['search'])){
+            $Name = $_GET['search'];
+            $query = "SELECT * FROM tb_output  WHERE Date LIKE '%$Name%'";
+            $result= $conn->query($query);
+        }else {
+            $batas = 5;
+            $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+            $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
+
+            $previous = $halaman - 1;
+            $next = $halaman + 1;
+            
+            $data = mysqli_query($conn,"SELECT * FROM tb_output ");
+            $jumlah_data = mysqli_num_rows($data);
+            $total_halaman = ceil($jumlah_data / $batas);
+
+            $data_pegawai = "SELECT * FROM tb_output limit $halaman_awal, $batas";
+            $nomor = $halaman_awal+1;
+            //$query = "SELECT * FROM tb_input  ORDER BY Id DESC";
+            $result= $conn->query($data_pegawai);
+        }
             $data = 1;
             while ($row=$result->fetch_assoc()) {
              ?>
@@ -56,3 +75,18 @@ include "../koneksi.php";
 <?php
 include "../footer.php";
 ?>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js">
+</script>
+
+<script>
+    
+    $(".form-control").on("change", function() {
+    this.setAttribute(
+        "data-date",
+        moment(this.value, "DD-mm-YYYY")
+        .format( this.getAttribute("data-date-format") )
+    )
+    }).trigger("change")
+
+</script>
