@@ -13,49 +13,31 @@ if ($_SESSION ['level'] =="admin") {
   # code...
 }
 
-echo $_SESSION['level'];
-
 ?>
 
 <link rel="stylesheet" href="../style.css" type="text/css">
 
-  <section id="sidebar">
-  
-
-        <div class="d-flex flex-column flex-shrink-0 p-3 " style="width: 280px;">
-    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <img src="../img/profile.png" width="50%" alt=""><use xlink:href=""></use></svg>
-      <span class="fs-4"></span>
-    </a>
+<section id="sidebar">
+    <div class="d-flex flex-column flex-shrink-0 p-3 " style="width: 280px;">
+        <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="../img/profile.png" width="50%" alt=""><use xlink:href=""></use></svg>
+            <span class="fs-4"></span>
+        </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto ">
-      <li class="nav-item">
-        <a href="index.php?page=home" class="nav-link link-dark" aria-current="page">
-         <img src="../img/home 2.png" alt="" class="icon">
-          Home
-        </a>
-      </li>
-      <!-- <li>
-        <a href="index.php?page=Pemasukan" class="nav-link link-dark">
-        <img src="../img/pemasukan.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
-         pemasukan
-        </a>
-      </li>
-      <li>
-        <a href="index.php?page=Pengeluaran" class="nav-link link-dark">
-        <img src="../img/pengeluaran.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
-         pengeluaran 
-        </a>
-      </li> -->
+        <li class="nav-item">
+            <a href="index.php?page=home" class="nav-link link-dark" aria-current="page">
+                <img src="../img/home 2.png" alt="" class="icon">
+                Home
+            </a>
+        </li>
       <li>
         <a href="index.php?page=data" class="nav-link link-dark">
         <img src="../img/laporan 2.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
          Buku Kas
         </a>
       </li>
-      <li>
-      
-      </li>
+     
       
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" class="icon" >
@@ -77,77 +59,62 @@ echo $_SESSION['level'];
       </li>
       </ul>
   </div>
-      </section>
-      <section id="content">
-        <nav  class="shadow" style="height: 80px;">
-         <h3 class="mx-3 py-4" >Buku Kas Kelas</h3>
-         <!-- <div class="input-group">
-  <input type="text" class="form-control"  placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <span class="input-group-text" id="basic-addon2" ><i class='fs-3 py-1 bx bx-search icon'></i></span>
-</div> -->
-        <!-- <div class="input-group  "> 
+</section>
+<section id="content">
+    <nav  class="shadow" style="height: 80px;">
+        <h3 class="mx-3 py-4" >Buku Kas Kelas</h3>
+        <div class="navbar h3"> 
+        </div>
+    </nav>
 
-  <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" id="input">
-  <i class='bx bx-search icon'></i>
-</div> -->
-          <div class="navbar h3">
-            
-          </div>
-       </nav>
-
-
-
-      </section>
-      <main class="col-lg-9 offset-lg-2  pt-5"><br>
-
-    
-<?php
-if (isset($_GET['page'])) {
-  $page = $_GET['page'];
-
-  switch ($page) {
-    case 'home':
-      include "home.php";
-      break;
-    case 'Pemasukan':
-      include "tambah.php";
-      break;
-    case 'home':
-      include "home.php";
-      break;
-    case "masuk":
-      include "tampil_in.php";
-      break;
-    case "Pengeluaran":
-      include "tampil_out.php";
-      break;
-    case "edit_in":
-      include "update_in.php";
-      break;
-    case "edit_out":
-      include "update_out.php";
-      break;
-    case "data":
-      include "buku.php";
-      break;
-    case "kurang":
-      include "keluar.php";
-      break;
-    case "anggota":
-      include "add_user.php";
-      break;
-    case "Tampil_user":
-      include "tampil_user.php";
-      break;
-    default:
-    echo "halam ini gak ada";
-      break;
-  }
-}else{
-  include 'home.php';
-}
-?>
-</main>
+    <main class="col-md-9 ">
+    <?php
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
+        switch ($page) {
+            case 'home':
+                include "home.php";
+                break;
+            case 'Pemasukan':
+                include "tambah.php";
+                break;
+            case 'home':
+                include "home.php";
+                break;
+            case "masuk":
+                include "tampil_in.php";
+                break;
+            case "Pengeluaran":
+                include "tampil_out.php";
+                break;
+            case "edit_in":
+                include "update_in.php";
+                break;
+            case "edit_out":
+                include "update_out.php";
+                break;
+            case "data":
+                include "buku.php";
+                break;
+            case "kurang":
+                include "keluar.php";
+                break;
+            case "anggota":
+                include "add_user.php";
+                break;
+            case "Tampil_user":
+                include "tampil_user.php";
+                break;
+            default:
+                echo "halam ini gak ada";
+            break;
+        }
+    } else {
+        include 'home.php';
+    }
+    ?>
+    </main>
+</section>
        
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 

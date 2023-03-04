@@ -18,7 +18,7 @@ include "../koneksi.php";
 <link rel="stylesheet" href="../style.css" type="text/css">
 <div class="row">
     <div class="col-4 pt-4  ">
-        <button class="btn btn-success mx-2" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i></button>
+        <button class="btn btn-info mx-2" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i></button>
     </div>
 </div>
 <div class="row" id="print">

@@ -18,14 +18,14 @@ include "../koneksi.php";
 <link rel="stylesheet" href="../style.css" type="text/css">
 <div class="row">
     <div class="col-4 pt-4  ">
-    <button class="btn btn-success mx-2" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i></button>
+        <button class="btn btn-info mx-2" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i></button>
     </div>
 </div>
-        <div class="row">
+<div class="row" id="print">
             <div class="col-6">
            <br><br>
      <p class="m-3 ps-5" style="font-family:'Gill Sans';">Total Pemasukan : <?php echo $sum1 ?></p>
-     <fieldset id="print">
+ 
             <table border=1; class="table table-info table-striped offset-1" >
             <tr>
                 <td>ID</td>
@@ -93,7 +93,7 @@ include "../koneksi.php";
                     <th></th>
                 </tr>
             </table>
-            </fieldset>
+          
             </div>
         </div>
 

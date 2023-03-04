@@ -91,7 +91,7 @@ if ($_SESSION ['level'] =="admin") {
                 include "tampil_in.php";
                 break;
             case "Pengeluaran":
-                include "kurang.php";
+                include "tampil_out.php";
                 break;
             case "edit_in":
                 include "update_in.php";
