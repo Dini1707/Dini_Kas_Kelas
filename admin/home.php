@@ -6,8 +6,7 @@ include "../header.php";
 
 <link rel="stylesheet" href="../style.css" type="text/css">
 
-<div class="container pt-5 offset-1" >
-<div class="row pt-5">
+<div class="row p-5">
 
 <div class="col-lg-3 col-md-6">
 <a href="index.php?page=Tampil_user" style="color:black;">

@@ -17,10 +17,8 @@ data-date-format="YYYY-mm-DD" placeholder="yyyy-mm-dd" required autofocus>     <
     </form>
 </div>
 </div>
-        <!-- <div class="">
-            <div class="pt-5">
-            <a href="index.php?page=kurang" class="ms-5 ps-5"><button class="btn btn-outline-secondary" type="submit">Tambah</button></a><br>     -->
-            <table border=1; class="table table-info table-striped offset-1" ><br>
+
+            <table border="1" class="table table-info table-striped m-5" ><br>
             <tr>
                 <td>ID</td>
                 <td>DATE</td>
