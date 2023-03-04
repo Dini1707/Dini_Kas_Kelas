@@ -11,7 +11,7 @@ if (isset ($_POST['add'])) {
     $add ="INSERT INTO tb_input (Name,Saldo,Information ) VALUES ( '$Name', '$Input', '$Information')";
 
     if ($conn->query ($add) === TRUE) {
-      header ("location:index.php?page=masuk");
+      header ("location:index.php?page=Pemasukan");
         ob_end_flush();
       }else {
           
