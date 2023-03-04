@@ -141,7 +141,7 @@ include "header.php";
 </div>
 </section>
 
-<footer>
+<!-- <footer>
 <img class="position-absolute" height="50%" src="img/wave.svg" alt="">
 <br><br><br><br><br>
 <br><br><br><br><br>
@@ -153,7 +153,16 @@ include "header.php";
   </div>
 </div>
 
-</footer>
+</footer> -->
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<div class="pt-5">
+  <div class="position-absolute " style="left:40%;">
+  <a href="mailto:dinirahmaaprilianti1707@gmail.com">dinirahmaaprilianti1707@gmail.com</a>
+<a href="https://www.instagram.com/diirapril28_/">@diirapril28_</a>
+  </div>
+</div>
 <?php 
 include "footer.php";
 ?>
