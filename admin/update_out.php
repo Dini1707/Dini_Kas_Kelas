@@ -53,7 +53,6 @@ while ($row=$edit->fetch_assoc ()) {
 }
 
 if (isset($_POST ['edit'])){
-    $Id =$_POST  ['Id'];
     $Name = $_POST ['Name'];
     $Input = $_POST ['Input'];
     $Information = $_POST ['Information'];

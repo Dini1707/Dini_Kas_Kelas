@@ -34,15 +34,16 @@ include "../koneksi.php";
     <div class="row">
        <div class="col-lg-10">
        <div class="card-body pt-4">
-            <a href="index.php?page=kurang" class=""><button class="btn btn-primary">Tambahan</button></a> <br><br>
+            <a href="index.php?page=kurang" class=""><button class="btn btn-primary">Tambah</button></a> <br><br>
         <div class="table-responsive">
             <table class="table table-bordered table-info table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <td>NO</td>
                         <td>TANGGAL</td>
-                        <td>SALDO</td>
+                        <td>PENGELUARAN</td>
                         <td>KETERANGAN</td>
+                        <td>ACTION</td>
                     </tr>
                 </thead>
 
@@ -59,6 +60,8 @@ include "../koneksi.php";
                         <td><?php echo $row['Date']?></td>
                         <td><?php echo $row['Saldo']?></td>
                         <td><?php echo $row['Information']?></td>
+                        <td><a href="index.php?page=edit_out&id=<?php echo $row['Id'];?>"><img src="../img/edit.png" height="30" alt=""></a>
+                        <a href="delet_out.php?id=<?php echo $row['Id'];?>"><img src="../img/delete.png" height="30" alt=""></a></td>
                     </tr>
                 <?php
                 }

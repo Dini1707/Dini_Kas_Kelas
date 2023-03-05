@@ -34,7 +34,7 @@ include "../koneksi.php";
     <div class="row">
        <div class="col-lg-10">
        <div class="card-body pt-4">
-            <a href="index.php?page=kurang" class=""><button class="btn btn-primary">Tambahan</button></a> <br><br>
+            <a href="index.php?page=kurang" class=""><button class="btn btn-primary">Tambah</button></a> <br><br>
         <div class="table-responsive">
             <table class="table table-bordered table-info table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead>

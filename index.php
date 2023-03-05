@@ -3,7 +3,7 @@ include "header.php";
 ?>
 
 <link rel="stylesheet" href="style.css">
-<nav class="navbar navbar-expand-lg position-fixed w-100 " style="height:10%;">
+<nav class="navbar navbar-expand-lg position-fixed w-100 pe-5 " style="height:10%;">
   <div class="container-fluid">
     <img src="img/logo.png" width="10%" alt="">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

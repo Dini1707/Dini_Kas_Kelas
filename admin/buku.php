@@ -18,13 +18,12 @@ include "../koneksi.php";
 <link rel="stylesheet" href="../style.css" type="text/css">
 <div class="row">
     <div class="col-4 pt-4  ">
-        <button class="btn btn-info mx-2" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i></button>
     </div>
 </div>
 <div class="row" id="print">
-            <div class="col-6">
+            <div class="col-6 ">
            <br><br>
-     <p class="m-3 ps-5" style="font-family:'Gill Sans';">Total Pemasukan : <?php echo $sum1 ?></p>
+           <button class="btn btn-info " style="margin-left:8%; margin-bottom:2%;" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i></button>
  
             <table border=1; class="table table-info table-striped offset-1" >
             <tr>
@@ -50,7 +49,7 @@ include "../koneksi.php";
                         }
                 ?>
                 <tr>
-                    <th>Total :</th>
+                    <th>Total:</th>
                     <th></th>
                     <th><?php echo $sum1;?></th>
                     <th></th>
@@ -59,9 +58,8 @@ include "../koneksi.php";
             </div>
 
 
-            <div class="col-6">
+            <div class="col-6 mt-1" ><br><br>
             <br><br>
-     <p class="m-3 ps-5" style="font-family:'Gill Sans';">Total Pengeluaran : <?php echo $sum2 ?></p>
             <table border=1; class="table table-info table-striped offset-1" >
             <tr>
                 <td>ID</td>
