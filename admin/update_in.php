@@ -21,22 +21,16 @@ while ($row=$edit->fetch_assoc ()) {
 <form action=""  method="post"><br>
         <div class="row ">
   <div class="col-6 ">
-  <label for="Id">Id</label><br>
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4"  name="Id" placeholder="Id" aria-label="First name" id="Id" value="<?php echo $row['Id'];?>">
+  <label for="Id">Nama</label><br>
+    <input type="text" class="form-control from1 border border-2 border-dark rounded-4"  name="Name" placeholder="Id" aria-label="First name" id="Id" value="<?php echo $row['Name'];?>">
   </div>
   <div class="col-6 ">
-  <label for="Nama">Nama</label>
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Name" placeholder="Name" aria-label="Last name" id="Nama"  value="<?php echo $row['Name'];?>">
-  </div>
-
- 
-  <div class="col-6 ">
-  <label for="Input">Saldo Masuk</label>   
-    <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Saldo" placeholder="Input" aria-label="First name" id="Saldo"  value="<?php echo $row['Saldo'];?>">
+  <label for="Nama">Keterangan</label>
+    <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Information" placeholder="Name" aria-label="Last name" id="Nama"  value="<?php echo $row['Information'];?>">
   </div>
   <div class="col-6 ">
-  <label for="Dsc">Keterangan</label>   
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4"  name="Information" placeholder="Information" aria-label="Last name" id="Dsc"  value="<?php echo $row['Information'];?>">
+  <label for="Dsc">Saldo Masuk</label>   
+    <input type="number" class="form-control from1 border border-2 border-dark rounded-4"  name="Saldo" placeholder="Information" aria-label="Last name" id="Dsc"  value="<?php echo $row['Saldo'];?>">
   </div>
 </div><br>
 
@@ -60,7 +54,7 @@ if (isset($_POST ['edit'])){
     $update = $conn->query ( "UPDATE tb_input SET Id='$Id',  Name='$Name', Saldo='$Saldo', Information='$Information' WHERE Id='$Id' ");
 
     if ($update){
-      header ("location:index.php?page=Buku");
+      header ("location:index.php?page=masuk");
       ob_end_flush();
     }else {
         

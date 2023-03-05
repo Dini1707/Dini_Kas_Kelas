@@ -3,7 +3,7 @@ ob_start();
     include "../koneksi.php";
     include "../header.php";
     $Id =$_GET ['Id'];
-    $sql="SELECT * FROM tb_input  WHERE Id='$Id'";
+    $sql="SELECT * FROM tb_output  WHERE Id='$Id'";
     $edit = $conn->query($sql);
 ?>
 <link rel="stylesheet" href="../style.css">
@@ -21,18 +21,8 @@ while ($row=$edit->fetch_assoc ()) {
 <form action=""  method="post"><br>
         <div class="row ">
   <div class="col-6 ">
-  <label for="Id">Id</label><br>
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4"  name="Id" placeholder="Id" aria-label="First name" id="Id" value="<?php echo $row['Id'];?>">
-  </div>
-  <div class="col-6 ">
-  <label for="Nama">Nama</label>
-    <input type="text" class="form-control from1 border border-2 border-dark rounded-4" name="Name" placeholder="Name" aria-label="Last name" id="Nama"  value="<?php echo $row['Name'];?>">
-  </div>
-
- 
-  <div class="col-6 ">
   <label for="Input">Saldo Masuk</label>   
-    <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Input" placeholder="Input" aria-label="First name" id="Input"  value="<?php echo $row['Input'];?>">
+    <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Saldo" placeholder="Input" aria-label="First name" id="Input"  value="<?php echo $row['Saldo'];?>">
   </div>
   <div class="col-6 ">
   <label for="Dsc">Keterangan</label>   
@@ -53,13 +43,12 @@ while ($row=$edit->fetch_assoc ()) {
 }
 
 if (isset($_POST ['edit'])){
-    $Name = $_POST ['Name'];
-    $Input = $_POST ['Input'];
+    $Input = $_POST ['Saldo'];
     $Information = $_POST ['Information'];
-    $update = $conn->query ( "UPDATE tb_input SET Id='$Id',  Name='$Name', Input='$Input', Information='$Information' WHERE Id='$Id' ");
+    $update = $conn->query ( "UPDATE tb_output SET Saldo='$Input', Information='$Information' WHERE Id='$Id' ");
 
     if ($update){
-      header ("location:index.php?page=Buku");
+      header ("location:index.php?page=Pengeluaran");
       ob_end_flush();
     }else {
         
