@@ -47,11 +47,10 @@ while ($row=$edit->fetch_assoc ()) {
 }
 
 if (isset($_POST ['edit'])){
-    $Id =$_POST  ['Id'];
     $Name = $_POST ['Name'];
     $Saldo = $_POST ['Saldo'];
     $Information = $_POST ['Information'];
-    $update = $conn->query ( "UPDATE tb_input SET Id='$Id',  Name='$Name', Saldo='$Saldo', Information='$Information' WHERE Id='$Id' ");
+    $update = $conn->query ( "UPDATE tb_input SET Name='$Name', Saldo='$Saldo', Information='$Information' WHERE Id='$Id' ");
 
     if ($update){
       header ("location:index.php?page=masuk");

@@ -33,7 +33,6 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	theme: "light2",
 	animationEnabled: true,
 	title: {
-		text: "Average Composition of Magma"
 	},
 	data: [{
 		type: "doughnut",
@@ -54,7 +53,7 @@ chart.render();
 <div style="margin-left:10%; margin-top:50px;" class="row p-5"> 
 
 <div class="col-lg-3 col-md-6">
-<a href="index.php?page=Tampil_user" style="color:black;">
+<a style="color:black;">
 <div class="kotak4 card">
 
 <?php
@@ -110,10 +109,13 @@ $sum2 = $row['Saldo'];
     <img class="g1" src="../img/total.png" alt="">
 </div>
 </div>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<div class="mt-3">
+<div id="chartContainer" style="height: 370px; width: 100%; margin-top:25px;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
        </div>
 
+
+</div>
 <main>
 
 

@@ -37,7 +37,7 @@ if (isset ($_POST['add'])) {
   <div class="">
     <div >
       <label for="Input">Saldo Keluar</label>   
-        <input type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Saldo" placeholder="Input" aria-label="First name" id="Input">
+        <input required type="number" class="form-control from1 border border-2 border-dark rounded-4" name="Saldo" placeholder="Input" aria-label="First name" id="Input">
     </div>
   </div>
   </div>
@@ -45,14 +45,14 @@ if (isset ($_POST['add'])) {
   <div class="col-6 ">
   <label for="Dsc">Keterangan</label>   
   <div class="form-floating ">
-  <textarea class="form-control form-control from1 border border-2 border-dark rounded-4" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 135px" name="Information"></textarea>
+  <textarea required class="form-control form-control from1 border border-2 border-dark rounded-4" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 135px" name="Information"></textarea>
 </div>
   </div>
 </div>
 
-<div class="float-end btn btn-success mt-2">
+<div class="float-end btn btn-primary mt-2">
     <img src="../img/kirim.png" width= 20px; alt="">
-	<input type="submit" name="add" id="submit"  value="Simpan"  class=" btn btn-success">
+	<input type="submit" name="add" id="submit"  value="Simpan"  class=" btn btn-primary">
     
 	</div>
 </form>

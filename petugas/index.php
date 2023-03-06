@@ -31,6 +31,12 @@ if ($_SESSION ['level'] =="admin") {
                 Home
             </a>
         </li>
+        <li>
+            <a href="index.php?page=Tampil_user" class="nav-link link-dark">
+                <img src="../img/add.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
+                Anggota
+            </a>
+        </li>
       <li>
         <a href="index.php?page=data" class="nav-link link-dark">
         <img src="../img/laporan 2.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>

@@ -43,7 +43,6 @@ include "../koneksi.php";
                         <td>TANGGAL</td>
                         <td>PENGELUARAN</td>
                         <td>KETERANGAN</td>
-                        <td>ACTION</td>
                     </tr>
                 </thead>
 
@@ -60,8 +59,6 @@ include "../koneksi.php";
                         <td><?php echo $row['Date']?></td>
                         <td><?php echo $row['Saldo']?></td>
                         <td><?php echo $row['Information']?></td>
-                        <td><a href="index.php?page=edit_out&id=<?php echo $row['Id'];?>"><img src="../img/edit.png" height="30" alt=""></a>
-                        <a href="delet_out.php?id=<?php echo $row['Id'];?>"><img src="../img/delete.png" height="30" alt=""></a></td>
                     </tr>
                 <?php
                 }
@@ -77,7 +74,7 @@ include "../koneksi.php";
        <div class="col-lg-2 mt-5 pt-5">
     <div class="card mt-5 ">
       <div class="card-body " style=background-color:#ACC8DC;>
-        <h5 class="card-title">Saldo Akhir</h5>
+        <h6 class="card-title">Total Pengeluaran</h6>
         <p class="card-text"><?php echo $sum;?></p>
       </div>
     </div>

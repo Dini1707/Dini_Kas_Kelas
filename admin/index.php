@@ -32,9 +32,9 @@ if ($_SESSION ['level'] =="admin") {
             </a>
         </li>
         <li>
-            <a href="index.php?page=anggota" class="nav-link link-dark">
+            <a href="index.php?page=Tampil_user" class="nav-link link-dark">
                 <img src="../img/add.png" alt="" class="icon"><use xlink:href="#speedometer2"></use></svg>
-                Tambah Anggota
+                Anggota
             </a>
         </li>
       <li>
