@@ -61,8 +61,8 @@ include "../koneksi.php";
                         <td><?php echo $row['Saldo']?></td>
                         <td><?php echo $row['Information']?></td>
                         <td><a href="index.php?page=edit_out&Id=<?php echo $row['Id'];?>"><img src="../img/edit.png" height="30" alt=""></a>
-                        <a href="delete_out.php?Id=<?php echo $row['Id'];?>"><img src="../img/delete.png" height="30" alt=""></a></td>
-                    </tr>
+                        <a href="delete_out.php?Id=<?php echo $row['Id'];?>" onclick="return confirm('yakin')"><img src="../img/delete.png" height="30" alt=""></a>
+                        </tr>
                 <?php
                 }
                 ?>

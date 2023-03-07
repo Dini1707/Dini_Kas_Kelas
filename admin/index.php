@@ -73,7 +73,9 @@ if ($_SESSION ['level'] =="admin") {
         </div>
     </nav>
 
-    <main class="col-md-9 ">
+ 
+</section>
+<main class="col-md-9 offset-2 pt-5">
     <?php
     if (isset($_GET['page'])) {
         $page = $_GET['page'];
@@ -120,8 +122,6 @@ if ($_SESSION ['level'] =="admin") {
     }
     ?>
     </main>
-</section>
-       
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 
