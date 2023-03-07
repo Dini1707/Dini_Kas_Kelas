@@ -80,7 +80,7 @@ include "../koneksi.php";
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary"><a href="delete_in.php?Id=<?php echo $row['Id'];?>" ><img src="../img/delete.png" height="30" alt=""></a></button>
+        <button type="button" class="btn btn-primary"><a href="delete_in.php?Id=<?php echo $row['Id'];?>" ><img src="../img/delete.png" height="30" alt=""></a></button> -->
       </div>
     </div>
   </div>
