@@ -63,8 +63,8 @@ include "../koneksi.php";
                         <td><?php echo $row['Saldo']?></td>
                         <td><?php echo $row['Information']?></td>
                         <td><a href="index.php?page=edit_in&Id=<?php echo $row['Id'];?>"><img src="../img/edit.png" height="30" alt=""></a>
-                        <!-- <a href="delete_in.php?Id=<?php echo $row['Id'];?>"><img src="../img/delete.png" height="30" alt=""></a> -->
-                        <button class="btn" type="button" value="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="delete_in.php?Id=<?php echo $row['Id'];?>" onclick="return confirm('yakin hapus')"><img src="../img/delete.png" height="30" alt=""></a>
+                        <!-- <button class="btn" type="button" value="" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img src="../img/delete.png" height="30" alt=""> 
                         </button>
 
@@ -80,7 +80,7 @@ include "../koneksi.php";
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary"><a href="delete_in.php?Id=<?php echo $row['Id'];?>" ><img src="../img/delete.png" height="30" alt=""></a></button> -->
       </div>
     </div>
   </div>
