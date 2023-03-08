@@ -17,20 +17,24 @@ include "../koneksi.php";
 
 <link rel="stylesheet" href="../style.css" type="text/css">
 <div class="row">
-    <div class="col-4 pt-4  ">
+    <div class="col-4 pt-5 ms-4 mt-5 ">
+    <button class="btn btn-info d-inline" style="margin-left:8%; margin-bottom:2%;" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i>Print'</button>
+
+        <form action="" method="get" style="display: inline;">
+            <div class="input-group mb-3">
+                <input type="text" name="page" value="data" hidden>
+                <input type="number" min="1" max="12" class="form-control" placeholder="Bulan"  name="bulan">
+                <input type="number" min="2022" max="" class="form-control" placeholder="Tahun" name="tahun">
+                <button class="btn btn-outline-secondary" type="submit" name="search" >Button</button>
+            </div>
+        </form>
     </div>
 </div>
-<div class="row" id="print">
-            <div class="col-6 ">
-           <br><br>
-           <button class="btn btn-info d-inline" style="margin-left:8%; margin-bottom:2%;" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i></button>
-           <form action="" method="get" style="display: inline;">
-<input  type="text" name="page" value="data" hidden>
-    <input placeholder="bulan" type="number" min="1" max="12" name="bulan" class="border border-2 rounded-2">
-    <input placeholder="tahun" type="number" min="2022" max="" name="tahun" class="border border-2 rounded-2">
-    <input type="submit" name="search" value="search" hidden>
-</form>
-            <table border=1; class="table table-info table-striped offset-1" >
+<div class="row mt-4" id="print">
+            <div class="col-lg-6 ">
+           
+           
+            <table border=1; class="table table-info table-striped " >
             <tr>
                 <td>ID</td>
                 <td>DATE</td>
@@ -70,15 +74,14 @@ include "../koneksi.php";
             </div>
 
 
-            <div class="col-6 mt-1" ><br><br>
-            <br><br>
-            <table border=1; class="table table-info table-striped offset-1" >
+            <div class="col-lg-6 mt-1" >
+        
+            <table border=1; class="table table-info table-striped" >
             <tr>
                 <td>ID</td>
                 <td>DATE</td>
                 <td>OUTPUT</td>
-                <td>INFORMATION</td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                <td>INFORMATION</td>                                                                      
             </tr>
 
             <?php 
@@ -120,3 +123,14 @@ include "../koneksi.php";
 <?php 
 include "../footer.php";
 ?>
+
+<script type="text/javascript">
+  function printDiv (el) {
+    var a= document.body.innerHTML;
+    var b= document.getElementById(el).innerHTML;
+
+    document.body.innerHTML=b;
+    window.print();
+    dokument.body.innerHTML=a;
+  }
+</script>

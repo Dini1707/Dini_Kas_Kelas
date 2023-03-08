@@ -33,7 +33,7 @@ include "../koneksi.php";
 <div class="container-fluid ms-5">
     <div class="row">
        <div class="col-lg-10">
-       <div class="card-body pt-4">
+       <div class="card-body pt-4"><br><br>
             <a href="index.php?page=kurang" class=""><button class="btn btn-primary">Tambah</button></a> <br><br>
         <div class="table-responsive">
             <table class="table table-bordered table-info table-striped" id="dataTable" width="100%" cellspacing="0">
