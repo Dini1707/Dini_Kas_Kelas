@@ -80,7 +80,7 @@ $row = mysqli_fetch_assoc($result1);
 $sum1 = $row['Saldo'];
 
 ?>
-    <p class="pt-4 mt-3 ps-5 fw-bold "><?php echo $sum1;?><br/></p>
+    <p class="pt-4 mt-3 ps-4 fw-bold ">Rp. <?php echo $sum1;?><br/></p>
     <p class="p1">UANG MASUK</p>
     <img class="g1" src="../img/masuk.png" alt="">
 </div>
@@ -95,7 +95,7 @@ $row = mysqli_fetch_assoc($result2);
 $sum2 = $row['Saldo'];
 
 ?>
-    <p class="pt-4 mt-3 ps-5 fw-bold "><?php echo $sum2;?><br/></p>
+    <p class="pt-4 mt-3 ps-4 fw-bold ">Rp. <?php echo $sum2;?><br/></p>
     <p class="p1">UANG KELUAR</p>
     <img class="g1" src="../img/keluar.png" alt="">
 </div>
@@ -104,7 +104,7 @@ $sum2 = $row['Saldo'];
 
 <div class="col-lg-3 col-md-4">
 <div class="kotak3 card">
-<p class="pt-4 mt-3 ps-5 fw-bold "><?php echo $sum1 - $sum2;?><br/></p>
+<p class="pt-4 mt-3 ps-4 fw-bold ">Rp. <?php echo $sum1 - $sum2;?><br/></p>
     <p class="p1" style="left:20%;">TOTAL </p>
     <img class="g1" src="../img/total.png" alt="">
 </div>

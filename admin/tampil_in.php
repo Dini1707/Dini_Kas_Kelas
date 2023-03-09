@@ -60,10 +60,10 @@ include "../koneksi.php";
                         <td><?php echo $data++;?></td>
                         <td><?php echo $row['Name']?></td>
                         <td><?php echo $row['Date']?></td>
-                        <td><?php echo $row['Saldo']?></td>
+                        <td>Rp. <?php echo $row['Saldo']?></td>
                         <td><?php echo $row['Information']?></td>
                         <td><a href="index.php?page=edit_in&Id=<?php echo $row['Id'];?>"><img src="../img/edit.png" height="30" alt=""></a>
-                        <a href="delete_in.php?Id=<?php echo $row['Id'];?>" onclick="return confirm('yakin')"><img src="../img/delete.png" height="30" alt=""></a>
+                        <a href="delete_in.php?Id=<?php echo $row['Id'];?>" onclick="return confirm('Yakin Ingin Di Hapus?')"><img src="../img/delete.png" height="30" alt=""></a>
                     </td>
                     </tr>
                 <?php
@@ -77,14 +77,16 @@ include "../koneksi.php";
             </div>
         </div>  
        </div>
-       <div class="col-lg-2 mt-5 pt-5">
-    <div class="card mt-5 ">
-      <div class="card-body " style=background-color:#ACC8DC;>
-        <h5 class="card-title">Saldo Akhir</h5>
-        <p class="card-text"><?php echo $sum;?></p>
-      </div>
-    </div>
-    </div>
+        <div class="col-lg-2 mt-5 pt-5">
+            <div class=" pt-5">
+                <div class="card mt-5">
+                    <div class="card-body " style="background-color:#ACC8DC; font-family:Cooper;">
+                        <h5 class="card-title text-center">Total Pemasukan</h5>
+                        <p class="text-center card-text fs-3" style="font-family:Rockwell;">Rp. <?php echo $sum;?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

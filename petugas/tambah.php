@@ -25,10 +25,10 @@ if (isset ($_POST['add'])) {
 <link rel="stylesheet" href="../style.css" type="text/css">
 
 
-
+<br>
 <h2 class="py-4">Tambah Kas Masuk</h2>
 
-<div  style="width:120%; background-color:#377BE1;" ><h3 class="p-3 text-white">Form Kas Masuk</h3></div>
+<div  style="width:105%; background-color:#377BE1;" ><h3 class="p-3 text-white">Form Kas Masuk</h3></div>
 <div class="col-8 offset-3 pt-5">
 <form action=""  method="post"><br>
         <div class="row ">

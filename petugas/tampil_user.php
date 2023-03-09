@@ -1,3 +1,4 @@
+
 <?php
 include "../header.php";
 include "../koneksi.php";
@@ -26,34 +27,35 @@ include "../koneksi.php";
             <!-- Begin Page Content -->
 <div class="container-fluid ms-5">
     <div class="row">
-       <div class="col-12">
-       <div class="card-body pt-4">
-        <div class="table-responsive">
+       <div class="col-lg-12">
+       <div class="card-body pt-4"><br><br>
+        <div class="table-responsive"><br><br>
             <table class="table table-bordered table-info table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <tr>
-                        <td>NO</td>
-                        <td>NISN</td>
-                        <td>NAME</td>
-                        <td>KELAS</td>
-                        <td>JENIS KELAMIN</td>
-                    </tr>
+                <tr>
+                <td>NO</td>
+                <td>NISN</td>
+                <td>NAME</td>
+                <td>KELAS</td>
+                <td>JENIS KELAMIN</td>
+            </tr>
                 </thead>
 
                 <tbody>
                 <?php
-                $query = "SELECT * FROM tb_student_list";
+                $query = "SELECT * FROM tb_student_list ORDER BY Id DESC";
                 $result= $conn->query($query);
                 $data = 1;
                 while ($row=$result->fetch_array()){
 
                 ?>
-                    <tr>
-                        <td><?php echo $data++;?></td>
-                        <td><?php echo $row['Nisn']?></td>
-                        <td><?php echo $row['Name']?></td>
-                        <td><?php echo $row['Class']?></td>
-                        <td><?php echo $row['Gender']?></td>
+                     <tr>
+                        <td><?php echo $data++?></td>
+                        <td><?php echo $row["Nisn"]?></td>
+                        <td><?php echo $row["Name"]?></td>
+                        <td><?php echo $row["Class"]?></td>
+                        <td><?php echo $row["Gender"]?></td>
+                        
                     </tr>
                 <?php
                 }
@@ -66,7 +68,6 @@ include "../koneksi.php";
             </div>
         </div>  
        </div>
-       
     </div>
 </div>
 

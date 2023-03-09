@@ -35,9 +35,9 @@ while ($row=$edit->fetch_assoc ()) {
 </div><br>
 
 
-<div class="float-end btn btn-success">
+<div class="float-end btn btn-primary">
     <img src="../img/kirim.png" width= 20px; alt="">
-	<input type="submit" name="edit" id="submit"  value="Simpan"  class=" btn btn-success">
+	<input type="submit" name="edit" id="submit"  value="Simpan"  class=" btn btn-primary">
     
 	</div>
 </form>

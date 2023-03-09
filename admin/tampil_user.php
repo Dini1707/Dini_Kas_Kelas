@@ -27,7 +27,7 @@ include "../koneksi.php";
             <!-- Begin Page Content -->
 <div class="container-fluid ms-5">
     <div class="row">
-       <div class="col-lg-10">
+       <div class="col-lg-12">
        <div class="card-body pt-4"><br><br>
             <a href="index.php?page=anggota" class=""><button class="btn btn-primary">Tambah</button></a> <br><br>
         <div class="table-responsive">
@@ -44,7 +44,7 @@ include "../koneksi.php";
 
                 <tbody>
                 <?php
-                $query = "SELECT * FROM tb_student_list";
+                $query = "SELECT * FROM tb_student_list ORDER BY Id DESC";
                 $result= $conn->query($query);
                 $data = 1;
                 while ($row=$result->fetch_array()){

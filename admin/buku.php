@@ -16,19 +16,21 @@ include "../koneksi.php";
     ?>
 
 <link rel="stylesheet" href="../style.css" type="text/css">
+<div class="container">
 <div class="row">
-    <div class="col-4 pt-5 ms-4 mt-5 ">
-    <button class="btn btn-info d-inline" style="margin-left:8%; margin-bottom:2%;" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i>Print'</button>
-
-        <form action="" method="get" style="display: inline;">
+    <div class="col-1 pt-5 ms-4 mt-5 ">
+        <button class="btn btn-info" style="margin-left:8%; margin-bottom:2%;" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i>Print</button>
+    </div>
+    <div class="col-3 pe-5 pt-5 mt-5">
+        <form action="" method="get" class="">
             <div class="input-group mb-3">
                 <input type="text" name="page" value="data" hidden>
-                <input type="number" min="1" max="12" class="form-control" placeholder="Bulan"  name="bulan">
-                <input type="number" min="2022" max="" class="form-control" placeholder="Tahun" name="tahun">
-                <button class="btn btn-outline-secondary" type="submit" name="search" >Button</button>
+                <input style="height:40px;" type="number" min="1" max="12" class="form-control" placeholder="Bulan"  name="bulan">
+                <input style="height:40px;" type="number" min="2022" max="" class="form-control" placeholder="Tahun" name="tahun">
+                <button style="height:40px; " class="btn btn-outline-secondary" type="submit" name="search" >Search</button>
             </div>
         </form>
-    </div>
+        </div>
 </div>
 <div class="row mt-4" id="print">
             <div class="col-lg-6 ">
@@ -58,7 +60,7 @@ include "../koneksi.php";
                 <tr>
                     <td><?php echo $data++?></td>
                     <td><?php echo $row["Date"]?></td>
-                    <td><?php echo $row["Saldo"]?></td>
+                    <td>Rp. <?php echo $row["Saldo"]?></td>
                     <td><?php echo $row["Information"]?></td>
                 </tr>
                     <?php
@@ -67,7 +69,7 @@ include "../koneksi.php";
                 <tr>
                     <th>Total:</th>
                     <th></th>
-                    <th><?php echo $sum1;?></th>
+                    <th>Rp. <?php echo $sum1;?></th>
                     <th></th>
                 </tr>
             </table>
@@ -100,7 +102,7 @@ include "../koneksi.php";
                 <tr>
                     <td><?php echo $data++?></td>
                     <td><?php echo $row["Date"]?></td>
-                    <td><?php echo $row["Saldo"]?></td>
+                    <td>Rp. <?php echo $row["Saldo"]?></td>
                     <td><?php echo $row["Information"]?></td>
                 </tr>
                     <?php
@@ -109,13 +111,14 @@ include "../koneksi.php";
                 <tr>
                     <th>Total :</th>
                     <th></th>
-                    <th><?php echo $sum2;?></th>
+                    <th>Rp. <?php echo $sum2;?></th>
                     <th></th>
                 </tr>
             </table>
           
             </div>
         </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

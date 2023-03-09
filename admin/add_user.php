@@ -15,7 +15,7 @@ if (isset($_POST['add'])) {
     alert('Data Berhasil Ditambahkan');
     window.location= 'index.php?page=anggota';
     </script>";
-//    header("location: index.php?page=Tampil_user");
+   header("location: index.php?page=Tampil_user");
    ob_end_flush();
    }
 }
@@ -24,10 +24,10 @@ if (isset($_POST['add'])) {
 <link rel="stylesheet" href="../style.css" type="text/css">
 
 
-
+<br>
 <h2 class="py-4">Tambah Anggota</h2>
 
-<div  style="width:120%; background-color:#377BE1;" ><h3 class="p-3 text-white">Form Kas Masuk</h3></div>
+<div  style="width:105%; background-color:#377BE1;" ><h3 class="p-3 text-white">Form Tambah Anggota</h3></div>
 <div class="col-8 offset-3 pt-5">
 <form action=""  method="post"><br>
 <div class="row ">
