@@ -1,5 +1,5 @@
 <?php 
-ob_start();
+include "isi.php";
 include "../koneksi.php";
 include "../header.php";
 
@@ -13,10 +13,8 @@ if (isset($_POST['add'])) {
    if ($conn->query ($add) === TRUE) {
     echo "<script>
     alert('Data Berhasil Ditambahkan');
-    window.location= 'index.php?page=anggota';
+    window.location= 'index.php?page=Tampil_user';
     </script>";
-   header("location: index.php?page=Tampil_user");
-   ob_end_flush();
    }
 }
 ?>

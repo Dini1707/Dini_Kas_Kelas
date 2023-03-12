@@ -1,5 +1,6 @@
 
 <?php
+include "isi.php";
 include "../header.php";
 include "../koneksi.php";
 ?>
@@ -39,6 +40,7 @@ include "../koneksi.php";
                 <td>NAME</td>
                 <td>KELAS</td>
                 <td>JENIS KELAMIN</td>
+                <td>ACTION</td>
             </tr>
                 </thead>
 
@@ -56,7 +58,9 @@ include "../koneksi.php";
                         <td><?php echo $row["Name"]?></td>
                         <td><?php echo $row["Class"]?></td>
                         <td><?php echo $row["Gender"]?></td>
-                        
+                        <td><a href="index.php?page=edit_user&Id=<?php echo $row['Id'];?>"><img src="../img/edit.png" height="30" alt=""></a>
+                        <a href="delete_user.php?Id=<?php echo $row['Id'];?>" onclick="return confirm('Yakin Ingin Di Hapus?')"><img src="../img/delete.png" height="30" alt=""></a>
+                    </td>
                     </tr>
                 <?php
                 }

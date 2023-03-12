@@ -1,5 +1,5 @@
 <?php
-include "isi.php";
+include "../header.php";
 include "../koneksi.php";
 ?>
 
@@ -18,9 +18,11 @@ include "../koneksi.php";
 <link rel="stylesheet" href="../style.css" type="text/css">
 <div class="container">
 <div class="row">
+
     <div class="col-1 pt-5 ms-4 mt-5 ">
         <button class="btn btn-info" style="margin-left:8%; margin-bottom:2%;" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'></i>Print</button>
     </div>
+    
     <div class="col-3 pe-5 pt-5 mt-5">
         <form action="" method="get" class="">
             <div class="input-group mb-3">

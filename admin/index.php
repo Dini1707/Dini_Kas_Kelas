@@ -1,4 +1,5 @@
 <?php
+include "isi.php";
 include "../header.php";
 
 session_start();
@@ -112,6 +113,12 @@ if ($_SESSION ['level'] =="admin") {
                 break;
             case "Tampil_user":
                 include "tampil_user.php";
+                break;
+                 case "edit_user":
+                include "update_user.php";
+                break;
+                 case "delete_user":
+                include "delete_user.php";
                 break;
             default:
                 echo "halam ini gak ada";

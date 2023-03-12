@@ -12,21 +12,25 @@ $password = $_POST['password'];
  
 // menyeleksi data admin dengan username dan password yang sesuai
 
-$sql = " SELECT * FROM tb_user where  username='$username' and password= md5('$password') ";
+$sql = "SELECT * FROM tb_user where username='$username' and password= md5('$password') ";
 $result = $conn->query($sql);
 
-if ($result-> num_rows > 0) {
+if ($result->num_rows > 0) {
 	// output data of each row
 	while ($row = $result-> fetch_assoc()){
-		if ($row ['role' ]== "admin") {
+		if ($row ['role' ] == "admin") {
 			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "admin";
-			header("location:admin/index.php");
+			echo "<script>
+			document.location.href='admin/index.php'
+			</script>";
 		}elseif ($row ['role'] == "petugas") {
 			$_SESSION['username'] = $username;
 			$_SESSION['level'] = "petugas";
-			header("location:petugas/index.php");
-			# code...
+			echo "<script>
+			document.location.href='petugas/index.php'
+			</script>";
+		
 		}
 			}
 		

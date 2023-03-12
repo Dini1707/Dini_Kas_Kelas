@@ -4,5 +4,5 @@
 session_destroy();
  
 // mengalihkan halaman sambil mengirim pesan logout
-header("location:../Dini_kas_Kelas/index.php");
+header("location:../Dini_Kas_Kelas/index.php");
 ?>

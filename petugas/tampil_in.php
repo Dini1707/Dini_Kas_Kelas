@@ -44,13 +44,12 @@ include "../koneksi.php";
                         <td>TANGGAL</td>
                         <td>SALDO</td>
                         <td>KETERANGAN</td>
-                        <td>ACTION</td>
                     </tr>
                 </thead>
 
                 <tbody>
                 <?php
-                $query = "SELECT * FROM tb_input";
+                $query = "SELECT * FROM tb_input ORDER BY id DESC";
                 $result= $conn->query($query);
                 $data = 1;
                 while ($row=$result->fetch_array()){
@@ -62,9 +61,6 @@ include "../koneksi.php";
                         <td><?php echo $row['Date']?></td>
                         <td>Rp. <?php echo $row['Saldo']?></td>
                         <td><?php echo $row['Information']?></td>
-                        <td><a href="index.php?page=edit_in&Id=<?php echo $row['Id'];?>"><img src="../img/edit.png" height="30" alt=""></a>
-                        <a href="delete_in.php?Id=<?php echo $row['Id'];?>" onclick="return confirm('Yakin Ingin Di Hapus?')"><img src="../img/delete.png" height="30" alt=""></a>
-                    </td>
                     </tr>
                 <?php
                 }

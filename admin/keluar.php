@@ -1,5 +1,4 @@
 <?php 
-ob_start();
 include "../koneksi.php";
 include "../header.php";
 if (isset ($_POST['add'])) {
@@ -10,13 +9,10 @@ if (isset ($_POST['add'])) {
     $add ="INSERT INTO tb_output (Saldo, Information ) VALUES ('$Output', '$Information')";
 
     if ($conn->query ($add) === TRUE) {
-      header ("location:index.php?page=Pengeluaran");
-      ob_end_flush();
-    }else {
-        
-        echo "maaf gagal merubah data";
-   
-  }
+      echo "<script>
+      document.location.href='index.php?page=Pengeluaran';
+      </script>";
+    }
     }    
 ?>
 

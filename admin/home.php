@@ -1,4 +1,5 @@
 <?php 
+include "isi.php";
 include "../koneksi.php";
 include "../header.php";
 

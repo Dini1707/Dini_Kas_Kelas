@@ -1,10 +1,11 @@
 <?php
+include "isi.php";
 include "../header.php";
 include "../koneksi.php";
 ?>
 
 <?php
-                $result = mysqli_query($conn, 'SELECT SUM(Saldo) AS Saldo FROM tb_input'); 
+                $result = mysqli_query($conn, 'SELECT SUM(Saldo) AS Saldo FROM tb_output'); 
                 $row = mysqli_fetch_assoc($result); 
                 $sum = $row['Saldo'];
         
@@ -49,7 +50,7 @@ include "../koneksi.php";
 
                 <tbody>
                 <?php
-                $query = "SELECT * FROM tb_output";
+                $query = "SELECT * FROM tb_output ORDER BY id DESC";
                 $result= $conn->query($query);
                 $data = 1;
                 while ($row=$result->fetch_array()){
@@ -78,7 +79,7 @@ include "../koneksi.php";
             <div class=" pt-5">
                 <div class="card mt-5">
                     <div class="card-body " style="background-color:#ACC8DC; font-family:Cooper;">
-                        <h5 class="card-title text-center">Total Pemasukan</h5>
+                    <h6 class="card-title text-center">Total Pengeluaran</h6>
                         <p class="text-center card-text fs-3" style="font-family:Rockwell;">Rp. <?php echo $sum;?></p>
                     </div>
                 </div>

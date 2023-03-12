@@ -1,4 +1,5 @@
 <?php
+include "isi.php";
 include "../header.php";
 include "../koneksi.php";
 ?>
@@ -27,7 +28,7 @@ include "../koneksi.php";
 
 </head>
 
-            <!-- End of Topbar -->
+            <!-- Akhir head -->
 
             <!-- Begin Page Content -->
 <div class="container-fluid ms-5">
@@ -36,6 +37,7 @@ include "../koneksi.php";
        <div class="card-body pt-4"><br><br>
             <a href="index.php?page=Pemasukan" class=""><button class="btn btn-primary">Tambah</button></a> <br><br>
         <div class="table-responsive">
+
             <table class="table table-bordered table-info table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
@@ -49,8 +51,9 @@ include "../koneksi.php";
                 </thead>
 
                 <tbody>
+
                 <?php
-                $query = "SELECT * FROM tb_input";
+                $query = "SELECT * FROM tb_input ORDER BY id DESC";
                 $result= $conn->query($query);
                 $data = 1;
                 while ($row=$result->fetch_array()){
